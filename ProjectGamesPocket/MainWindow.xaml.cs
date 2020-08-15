@@ -54,7 +54,7 @@ namespace ProjectGamesPocket
         {
 
         }
-
+        //xd//
         private void btn_info_Click(object sender, RoutedEventArgs e)
         {
 
