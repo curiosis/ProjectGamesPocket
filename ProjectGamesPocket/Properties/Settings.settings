@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+
+  <Settings>
+    
+    <!--______________________USER______________________-->
+    <Setting Name="User" Type="System.String" Scope="User">
+      <Value Profile="(Default)">root</Value>
+    </Setting>
+    
+    <!--____________________PASSWORD________________________-->
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)"></Value>
+    </Setting>
+    
+    <!--_____________________SERVER_______________________-->
+    <Setting Name="Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    
+    <!--____________________DATABASE________________________-->
+    <Setting Name="Database" Type="System.String" Scope="User">
+      <Value Profile="(Default)">project_games_db</Value>
+    </Setting>
+    
+    <!--______________________PORT______________________-->
+    <Setting Name="Port" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">3306</Value>
+    </Setting>
+    
+    <!--__________________CHARACTERSET____________________-->
+    <Setting Name="CharacterSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">utf8</Value>
+    </Setting>
+
+
+  </Settings>
+  
+</SettingsFile>
