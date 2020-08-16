@@ -18,7 +18,7 @@
               HorizontalAlignment="Left">
             <StackPanel Orientation="Vertical"
                         Margin="0,0,0,0"
-                        Background="AliceBlue">
+                        Background="#2d183b">
                 
                 <!-- LOGIN BUTTON -->
                 <Button x:Name="btn_login"
@@ -157,7 +157,49 @@
             </StackPanel>
             
         </Grid>
-        
+
+        <Grid HorizontalAlignment="Right"
+              VerticalAlignment="Bottom"
+              Height="750"
+              Width="820">
+
+            <Image Source="/Assets/Images/GP_BackgroundLogin.png" 
+                   Height="840"
+                   Margin="0,-34,0,0"/>
+
+            <Frame x:Name="Main"
+                   NavigationUIVisibility="Hidden" 
+                   Margin="0,-36,0,0"/>
+
+        </Grid>
+
+        <!-- Right Menu Bar -->
+        <Grid HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Height="50">
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0">
+
+                <!-- Minimize Button -->
+                <Button x:Name="Minimize_button"
+                        BorderBrush="Transparent"
+                        Background="Transparent"
+                        Margin="5"
+                        Content="➖"
+                        FontSize="30" Click="Minimize_button_Click"/>
+
+                <!-- Exit Button -->
+                <Button x:Name="Exit_button"
+                        BorderBrush="Transparent"
+                        Background="Transparent"
+                        Margin="5"
+                        Content="❌"
+                        FontSize="30" Click="Exit_button_Click"/>
+
+            </StackPanel>
+
+        </Grid>
         
     </Grid>
 </Window>

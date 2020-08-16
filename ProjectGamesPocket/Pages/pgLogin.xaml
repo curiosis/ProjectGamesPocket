@@ -1,0 +1,143 @@
+﻿<Page x:Class="ProjectGamesPocket.Pages.pgLogin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjectGamesPocket.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" 
+      d:DesignWidth="820"
+      Title="pgLogin"
+      Background="White">
+
+    <Grid>
+        <Image Source="/Assets/Images/GP_BackgroundLogin.png"
+                   Stretch="Fill"/>
+
+        <TextBlock x:Name="txtbLoginTitle"
+                           Text="LogIn"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Top"
+                           FontFamily="Blacklisted"
+                           FontSize="80"
+                   Margin="0,10,0,0"/>
+
+        <StackPanel Width="650"
+                    Height="584"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal" Margin="0,166,0,0">
+
+
+            <StackPanel Width="500">
+
+
+                <!-- Login -->
+                <StackPanel Width="300">
+
+                    <TextBlock Text="Username"
+                               VerticalAlignment="Center"
+                               FontSize="35"
+                               Margin="0,50,0,0"/>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,10,0,0">
+
+                        <Image Source="/Assets/Icons/GP_accountlogin.png"
+                               Stretch="None" Height="48"/>
+
+                        <TextBox x:Name="Login_textbox"
+                                 Padding="10"
+                                 Text=""
+                                 FontSize="25"
+                                 Width="250"
+                                 VerticalAlignment="Center"
+                                 BorderThickness="0"
+                                 Foreground="#000000"
+                                 Background="Transparent"/>
+
+
+
+                    </StackPanel>
+
+                    <Border BorderBrush="Black"
+                            BorderThickness="0.5"/>
+
+                </StackPanel>
+
+                <!-- Password -->
+                <StackPanel Width="300"
+                            Margin="0,50,0,0">
+
+                    <TextBlock Text="Password"
+                               VerticalAlignment="Center"
+                               FontSize="35"/>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,10,0,0">
+
+                        <Image Source="/Assets/Icons/GP_locklogin.png"
+                               Stretch="Uniform"
+                               />
+
+                        <PasswordBox x:Name="Password_textbox"
+                                     Padding="10"
+                                     FontSize="25"
+                                     Width="250"
+                                     VerticalAlignment="Center"
+                                     BorderThickness="0"
+                                     Foreground="#000000"
+                                     Background="Transparent"/>
+
+
+
+                    </StackPanel>
+
+                    <Border BorderBrush="Black"
+                            BorderThickness="0.5"/>
+
+                </StackPanel>
+
+                <Button BorderBrush="Transparent"
+                        Background="Transparent"
+                        HorizontalAlignment="Center"
+                        BorderThickness="0"
+                        Padding="0"
+                        Content="Sign up"
+                        FontSize="30"
+                        Foreground="#2d183b"
+                        Margin="0,150,0,0" Click="Register_Click"/>
+
+            </StackPanel>
+
+            <!-- Next button -->
+            <StackPanel Width="150"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0,-120,0,0">
+
+                <Button x:Name="Next_button"
+                        BorderBrush="Transparent"
+                        Background="Transparent"
+                        Click="Next_button_Click"
+                        Padding="0">
+
+                    <StackPanel>
+                        <Image Source="/Assets/Icons/GP_iconlogin.png" 
+                               Height="100" 
+                               Width="100"
+                               Stretch="None"/>
+                        <TextBlock Text="Login"
+                                   HorizontalAlignment="Center"
+                                   FontSize="20"/>
+                    </StackPanel>
+
+                </Button>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+
+</Page>

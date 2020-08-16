@@ -1,17 +1,9 @@
-﻿using System;
+﻿using ProjectGamesPocket.Pages;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ProjectGamesPocket
 {
@@ -20,14 +12,20 @@ namespace ProjectGamesPocket
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+            MouseDown += Window_MouseDown;
+
+            Main.Content = new pgLogin();
         }
+
+        private List<Object> PageList = new List<Object>();
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-
+            NewPage(new pgLogin());
         }
 
         private void btn_home_Click(object sender, RoutedEventArgs e)
@@ -47,7 +45,7 @@ namespace ProjectGamesPocket
 
         private void btn_producer_Click(object sender, RoutedEventArgs e)
         {
-
+            NewPage(new pgProducers());
         }
 
         private void btn_new_Click(object sender, RoutedEventArgs e)
@@ -64,5 +62,31 @@ namespace ProjectGamesPocket
         {
 
         }
+
+        private void Exit_button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Minimize_button_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Mouse.LeftButton == MouseButtonState.Pressed)
+                this.DragMove();
+        }
+
+        private void NewPage(Page newPage)
+        {
+            if (newPage.ToString() != Main.Content.ToString())
+            {
+                PageList.Add(Main.Content);
+                Main.Content = newPage;
+            }
+        }
+
     }
 }
