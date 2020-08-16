@@ -18,7 +18,7 @@
     
     <!--_____________________SERVER_______________________-->
     <Setting Name="Server" Type="System.String" Scope="User">
-      <Value Profile="(Default)">localhost</Value>
+      <Value Profile="(Default)">127.0.0.1</Value>
     </Setting>
     
     <!--____________________DATABASE________________________-->
