@@ -57,11 +57,11 @@ namespace ProjectGamesPocket.DAL.Entities
 
         public Producers(MySqlDataReader mySqlDataReader)
         {
-            ID = int.Parse(mySqlDataReader["id"].ToString());
-            Name = mySqlDataReader["name"].ToString();
-            YoE = int.Parse(mySqlDataReader["yoe"].ToString());
-            Country = mySqlDataReader["country"].ToString();
-            Website = mySqlDataReader["website"].ToString();
+            ID = int.Parse(mySqlDataReader["id_producer"].ToString());
+            Name = mySqlDataReader["NameProducer"].ToString();
+            YoE = int.Parse(mySqlDataReader["YoE"].ToString());
+            Country = mySqlDataReader["Country"].ToString();
+            Website = mySqlDataReader["Website"].ToString();
         }
 
         public string ToInsert()

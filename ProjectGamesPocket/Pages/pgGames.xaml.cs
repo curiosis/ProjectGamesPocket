@@ -1,6 +1,4 @@
-﻿using ProjectGamesPocket.DAL.Repositories;
-using ProjectGamesPocket.DAL.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -16,19 +14,13 @@ using System.Windows.Shapes;
 namespace ProjectGamesPocket.Pages
 {
     /// <summary>
-    /// Logika interakcji dla klasy pgProducers.xaml
+    /// Logika interakcji dla klasy pgGames.xaml
     /// </summary>
-    public partial class pgProducers : Page
+    public partial class pgGames : Page
     {
-        public pgProducers()
+        public pgGames()
         {
             InitializeComponent();
-            producersListView.ItemsSource = ProducersRepo.GetAll();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            ProducersRepo.ADD_OPT += txtbox.Text;
         }
     }
 }

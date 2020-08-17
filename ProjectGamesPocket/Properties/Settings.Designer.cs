@@ -23,75 +23,48 @@ namespace ProjectGamesPocket.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("root")]
-        public string User {
+        [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
+        public string server {
             get {
-                return ((string)(this["User"]));
-            }
-            set {
-                this["User"] = value;
+                return ((string)(this["server"]));
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Password {
+        [global::System.Configuration.DefaultSettingValueAttribute("project_games_pocket")]
+        public string database {
             get {
-                return ((string)(this["Password"]));
-            }
-            set {
-                this["Password"] = value;
+                return ((string)(this["database"]));
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
-        public string Server {
+        [global::System.Configuration.DefaultSettingValueAttribute("user")]
+        public string userID {
             get {
-                return ((string)(this["Server"]));
-            }
-            set {
-                this["Server"] = value;
+                return ((string)(this["userID"]));
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("project_games_db")]
-        public string Database {
+        [global::System.Configuration.DefaultSettingValueAttribute("12345")]
+        public string paswd {
             get {
-                return ((string)(this["Database"]));
-            }
-            set {
-                this["Database"] = value;
+                return ((string)(this["paswd"]));
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("3306")]
-        public uint Port {
+        public uint port {
             get {
-                return ((uint)(this["Port"]));
-            }
-            set {
-                this["Port"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("utf8")]
-        public string CharacterSet {
-            get {
-                return ((string)(this["CharacterSet"]));
-            }
-            set {
-                this["CharacterSet"] = value;
+                return ((uint)(this["port"]));
             }
         }
     }

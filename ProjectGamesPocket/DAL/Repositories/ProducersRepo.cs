@@ -8,7 +8,8 @@ namespace ProjectGamesPocket.DAL.Repositories
 {
     class ProducersRepo
     {
-        private const string GET_ALL = "SELECT * FROM Producers";
+        public static string ADD_OPT = "WHERE ID = ";
+        private const string GET_ALL = "SELECT * FROM producers";
         private const string INSERT = "INSERT INTO Producers VALUE";
 
         public static List<Entities.Producers> GetAll()

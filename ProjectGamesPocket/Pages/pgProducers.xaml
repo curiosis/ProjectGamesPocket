@@ -45,8 +45,10 @@
                                             Width="50"/>
                             <GridViewColumn Header="Name" 
                                             DisplayMemberBinding="{Binding Name}" 
-                                            Width="200"/>
-                            <GridViewColumn Header="YoE" 
+                                            Width="200">
+
+                            </GridViewColumn>
+                                <GridViewColumn Header="YoE" 
                                             DisplayMemberBinding="{Binding YoE}" 
                                             Width="100"/>
                             <GridViewColumn Header="Country" 
@@ -61,6 +63,9 @@
                 </ListView>
                 
             </Grid>
+            <TextBox x:Name="txtbox" Text="TextBox" TextWrapping="Wrap" Width="120"/>
+            <Button x:Name="button" Content="Button" Click="button_Click"/>
+
 
         </StackPanel>
     </Grid>
