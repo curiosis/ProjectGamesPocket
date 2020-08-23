@@ -30,13 +30,5 @@ namespace ProjectGamesPocket.Pages
 
         }
 
-        private void NewPage(Page newPage)
-        {
-            if (newPage.ToString() != Main.Content.ToString())
-            {
-                PageList.Add(Main.Content);
-                Main.Content = newPage;
-            }
-        }
     }
 }

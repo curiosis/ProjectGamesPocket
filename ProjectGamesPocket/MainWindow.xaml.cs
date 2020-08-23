@@ -1,6 +1,7 @@
 ﻿using ProjectGamesPocket.Pages;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -12,6 +13,7 @@ namespace ProjectGamesPocket
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string url = $"https://github.com/curiosis/ProjectGamesPocket";
 
         public MainWindow()
         {
@@ -60,7 +62,7 @@ namespace ProjectGamesPocket
 
         private void btn_github_Click(object sender, RoutedEventArgs e)
         {
-
+            Process.Start(new ProcessStartInfo { FileName = url, UseShellExecute = true });
         }
 
         private void Exit_button_Click(object sender, RoutedEventArgs e)
