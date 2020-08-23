@@ -16,21 +16,23 @@
         <!-- LEFT MENU PART -->
         <Grid Width="180"
               HorizontalAlignment="Left">
+            <Image Source="/Assets/Images/GP_LeftBarBackground.png"/>
             <StackPanel Orientation="Vertical"
                         Margin="0,0,0,0"
-                        Background="#2d183b">
+                        Background="White">
                 
                 <!-- LOGIN BUTTON -->
                 <Button x:Name="btn_login"
                         BorderBrush="Transparent"
                         Background="Transparent"
-                        Margin="16,10"
+                        Margin="16,0"
                         Click="btn_login_Click">
                     <StackPanel>
-                        <Image Source="Assets/Icons/GP_Menu.png"
-                               Stretch="None"/>
+                        <Image Source="Assets/Icons/GP_iconLogin.png"
+                               Stretch="None" Width="112"
+                               RenderTransformOrigin="0.5,0.5"/>
                         <TextBlock x:Name="txtb_login"
-                                   Text="MENU"
+                                   Text="LOGIN"
                                    HorizontalAlignment="Center"
                                    FontSize="20"/>
                     </StackPanel>
@@ -141,7 +143,7 @@
                 <Button x:Name="btn_github"
                         BorderBrush="Transparent"
                         Background="Transparent"
-                        Margin="16,50,16,16"
+                        Margin="16,30,16,16"
                         Click="btn_github_Click"
                         Visibility="Visible">
                     <StackPanel>

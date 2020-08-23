@@ -19,7 +19,7 @@
                        FontSize="20"/>
 
             <Grid Width="750"
-                  Height="650"
+                  Height="600"
                   Margin="0,10,0,10">
                 <ListView x:Name="producersListView"
                           ScrollViewer.VerticalScrollBarVisibility="Visible"
@@ -63,8 +63,32 @@
                 </ListView>
                 
             </Grid>
-            <TextBox x:Name="txtbox" Text="TextBox" TextWrapping="Wrap" Width="120"/>
-            <Button x:Name="button" Content="Button" Click="button_Click"/>
+            <TextBlock x:Name="NameProducer" FontWeight="Bold" FontSize="15" Text="Name" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+            <TextBox x:Name="name_insert" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="20,10,0,0"/>
+            <TextBox x:Name="name_search" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="20,10,0,0"/>
+
+            <TextBlock Text="YoE" FontWeight="Bold" FontSize="15" TextWrapping="Wrap" Height="20" Width="120" HorizontalAlignment="Left" Margin="154,-140,0,0"/>
+            <TextBox x:Name="yoe_insert" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="154,-20,0,0"/>
+            
+            <TextBox x:Name="yoe_search" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="154,-80,0,0"/>
+
+            <TextBlock Text="Country" FontWeight="Bold" FontSize="15" TextWrapping="Wrap" Height="20" Width="120" HorizontalAlignment="Left" Margin="288,-140,0,0"/>
+            <TextBox x:Name="country_insert" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="288,-20,0,0"/>
+            <TextBox x:Name="country_search" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="288,-80,0,0"/>
+
+            <TextBlock Text="Website" FontWeight="Bold" FontSize="15" TextWrapping="Wrap" Height="20" Width="120" HorizontalAlignment="Left" Margin="422,-140,0,0"/>
+            <TextBox x:Name="website_insert" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="422,-80,0,0"/>
+
+            <TextBlock Text="«---" FontWeight="Bold" FontSize="25" TextWrapping="Wrap" Height="40" Width="120" HorizontalAlignment="Left" Margin="550,-80,0,0"/>
+            <TextBlock Text=" Insert" FontWeight="Bold" FontSize="20" TextWrapping="Wrap" Height="30" Width="120" HorizontalAlignment="Left" Margin="595,-80,0,0"/>
+
+            <TextBlock Text="«---" FontWeight="Bold" FontSize="25" TextWrapping="Wrap" Height="40" Width="120" HorizontalAlignment="Left" Margin="550,-30,0,0"/>
+            <TextBlock Text=" Search" FontWeight="Bold" FontSize="20" TextWrapping="Wrap" Height="30" Width="120" HorizontalAlignment="Left" Margin="595,-40,0,0"/>
+
+
+            <Button x:Name="btn_insert" Content="INSERT" Click="buttonInsert_Click" Height="20" Width="100" HorizontalAlignment="Right" Margin="0,-100,20,0"/>
+            <Button x:Name="btn_search" Content="SEARCH" Click="buttonSearch_Click" Height="20" Width="100" HorizontalAlignment="Right" Margin="0,-40,20,0"/>
+
 
 
         </StackPanel>

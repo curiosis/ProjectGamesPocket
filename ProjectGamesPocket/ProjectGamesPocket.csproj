@@ -23,6 +23,7 @@
     <None Remove="Assets\Icons\GP_Producer.png" />
     <None Remove="Assets\Icons\GP_Wallet.png" />
     <None Remove="Assets\Images\GP_BackgroundLogin.png" />
+    <None Remove="Assets\Images\GP_LeftBarBackground.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -78,6 +79,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Images\GP_BackgroundLogin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\GP_LeftBarBackground.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

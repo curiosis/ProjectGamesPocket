@@ -68,5 +68,14 @@ namespace ProjectGamesPocket.Properties {
                 return ResourceManager.GetString("login", resourceCulture);
             }
         }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Name.
+        /// </summary>
+        internal static string name {
+            get {
+                return ResourceManager.GetString("name", resourceCulture);
+            }
+        }
     }
 }

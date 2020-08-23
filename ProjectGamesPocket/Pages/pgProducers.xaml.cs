@@ -15,20 +15,23 @@ using System.Windows.Shapes;
 
 namespace ProjectGamesPocket.Pages
 {
-    /// <summary>
-    /// Logika interakcji dla klasy pgProducers.xaml
-    /// </summary>
     public partial class pgProducers : Page
     {
+        private string empty = "";
+
         public pgProducers()
         {
             InitializeComponent();
             producersListView.ItemsSource = ProducersRepo.GetAll();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void buttonSearch_Click(object sender, RoutedEventArgs e)
         {
-            ProducersRepo.ADD_OPT += txtbox.Text;
+            producersListView.ItemsSource = ProducersRepo.Getby(name_search.Text, country_search.Text, int.Parse(yoe_search.Text));
+        }
+        private void buttonInsert_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

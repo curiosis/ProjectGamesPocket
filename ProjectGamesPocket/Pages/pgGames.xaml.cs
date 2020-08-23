@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectGamesPocket.DAL.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,21 @@ namespace ProjectGamesPocket.Pages
         public pgGames()
         {
             InitializeComponent();
+            gamesListView.ItemsSource = GamesRepo.GetAll();
+        }
+
+        private void btnAddGame_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NewPage(Page newPage)
+        {
+            if (newPage.ToString() != Main.Content.ToString())
+            {
+                PageList.Add(Main.Content);
+                Main.Content = newPage;
+            }
         }
     }
 }

@@ -40,7 +40,7 @@ namespace ProjectGamesPocket
 
         private void btn_games_Click(object sender, RoutedEventArgs e)
         {
-
+            NewPage(new pgGames());
         }
 
         private void btn_producer_Click(object sender, RoutedEventArgs e)

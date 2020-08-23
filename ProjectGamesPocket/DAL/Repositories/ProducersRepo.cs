@@ -8,7 +8,7 @@ namespace ProjectGamesPocket.DAL.Repositories
 {
     class ProducersRepo
     {
-        public static string ADD_OPT = "WHERE ID = ";
+        public static string ADD_OPT = "SORT BY 'Country'";
         private const string GET_ALL = "SELECT * FROM producers";
         private const string INSERT = "INSERT INTO Producers VALUE";
 
@@ -18,7 +18,58 @@ namespace ProjectGamesPocket.DAL.Repositories
 
             using (var connection = DBConnection.Instance.Connection)
             {
-                MySqlCommand mySqlCommand = new MySqlCommand(GET_ALL, connection);
+                MySqlCommand mySqlCommand = new MySqlCommand($"{GET_ALL}", connection);
+                connection.Open();
+                var reader = mySqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    producers.Add(new Entities.Producers(reader));
+                }
+                connection.Close();
+            }
+            return producers;
+        }
+
+        public static List<Entities.Producers> Getby(string name, string country, int yoe)
+        {
+            List<Entities.Producers> producers = new List<Entities.Producers>();
+
+            using (var connection = DBConnection.Instance.Connection)
+            {
+                MySqlCommand mySqlCommand;
+                if (name == "" && country == "" && yoe <= 0)
+                {
+                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers", connection);
+                }
+                else if (name != "" && country == "" && yoe <= 0)
+                {
+                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE NameProducer='{name}'", connection);
+                }
+                else if(name !="" & country != "" && yoe <= 0)
+                {
+                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE Country='{country}' AND NameProducer='{name}'", connection);
+                }
+                else if (name=="" &country != "" && yoe <= 0)
+                {
+                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE Country='{country}'", connection);
+                }
+                else if(name=="" & country == "" && yoe > 0)
+                {
+                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE YoE={yoe}", connection);
+                }
+                else if (name !="" && country == "" && yoe > 0)
+                {
+                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE NameProducer='{name}' AND YoE={yoe}", connection);
+                }
+                else if(name == "" && country != "" && yoe > 0)
+                {
+                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE Country='{country}' AND YoE={yoe}", connection);
+                }
+                else
+                {
+                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE NameProducer='{name}' AND Country='{country}' AND YoE={yoe}", connection);
+                }
+
                 connection.Open();
                 var reader = mySqlCommand.ExecuteReader();
                 while (reader.Read())
