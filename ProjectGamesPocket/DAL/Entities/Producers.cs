@@ -41,9 +41,9 @@ namespace ProjectGamesPocket.DAL.Entities
         {
             ID = null;
             Name = name.Trim();
-            yoe = YoE;
-            country = Country;
-            website = Website;
+            YoE = yoe;
+            Country = country;
+            Website = website;
         }
 
         public Producers(Producers producers)
@@ -66,7 +66,7 @@ namespace ProjectGamesPocket.DAL.Entities
 
         public string ToInsert()
         {
-            return $"('{ID}', '{Name}', '{YoE}', '{Country}', '{Website}')";
+            return $"('{Name}', '{YoE}', '{Country}', '{Website}')";
         }
 
         public override string ToString()

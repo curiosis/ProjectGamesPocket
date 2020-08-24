@@ -10,7 +10,7 @@ namespace ProjectGamesPocket.DAL.Repositories
     {
         public static string ADD_OPT = "SORT BY 'Country'";
         private const string GET_ALL = "SELECT * FROM producers";
-        private const string INSERT = "INSERT INTO Producers VALUE";
+        private const string INSERT = "INSERT INTO Producers(NameProducer, YoE, Country, Website) VALUES";
 
         public static List<Entities.Producers> GetAll()
         {

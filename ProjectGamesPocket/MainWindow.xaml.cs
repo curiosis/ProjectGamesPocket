@@ -32,7 +32,7 @@ namespace ProjectGamesPocket
 
         private void btn_home_Click(object sender, RoutedEventArgs e)
         {
-
+            NewPage(new pgHome());
         }
 
         private void btn_account_Click(object sender, RoutedEventArgs e)

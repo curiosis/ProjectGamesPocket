@@ -1,5 +1,4 @@
-﻿using ProjectGamesPocket.DAL.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,19 +14,13 @@ using System.Windows.Shapes;
 namespace ProjectGamesPocket.Pages
 {
     /// <summary>
-    /// Logika interakcji dla klasy pgGames.xaml
+    /// Logika interakcji dla klasy pgHome.xaml
     /// </summary>
-    public partial class pgGames : Page
+    public partial class pgHome : Page
     {
-        public pgGames()
+        public pgHome()
         {
             InitializeComponent();
-            gamesListView.ItemsSource = GamesRepo.GetAll();
-        }
-
-        private void btnAddGame_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

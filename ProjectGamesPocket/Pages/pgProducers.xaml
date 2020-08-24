@@ -68,13 +68,13 @@
             <TextBox x:Name="name_search" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="20,10,0,0"/>
 
             <TextBlock Text="YoE" FontWeight="Bold" FontSize="15" TextWrapping="Wrap" Height="20" Width="120" HorizontalAlignment="Left" Margin="154,-140,0,0"/>
-            <TextBox x:Name="yoe_insert" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="154,-20,0,0"/>
+            <TextBox x:Name="yoe_search" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="154,-20,0,0"/>
             
-            <TextBox x:Name="yoe_search" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="154,-80,0,0"/>
+            <TextBox x:Name="yoe_insert" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="154,-80,0,0"/>
 
             <TextBlock Text="Country" FontWeight="Bold" FontSize="15" TextWrapping="Wrap" Height="20" Width="120" HorizontalAlignment="Left" Margin="288,-140,0,0"/>
-            <TextBox x:Name="country_insert" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="288,-20,0,0"/>
-            <TextBox x:Name="country_search" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="288,-80,0,0"/>
+            <TextBox x:Name="country_search" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="288,-20,0,0"/>
+            <TextBox x:Name="country_insert" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="288,-80,0,0"/>
 
             <TextBlock Text="Website" FontWeight="Bold" FontSize="15" TextWrapping="Wrap" Height="20" Width="120" HorizontalAlignment="Left" Margin="422,-140,0,0"/>
             <TextBox x:Name="website_insert" Text="" TextWrapping="Wrap" Width="120" Height="20" HorizontalAlignment="Left" Margin="422,-80,0,0"/>

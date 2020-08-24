@@ -12,12 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace ProjectGamesPocket.Pages
 {
     public partial class pgProducers : Page
     {
-        private string empty = "";
 
         public pgProducers()
         {
@@ -31,7 +31,25 @@ namespace ProjectGamesPocket.Pages
         }
         private void buttonInsert_Click(object sender, RoutedEventArgs e)
         {
+            string name="", country="a", website="b";
+            int yoe=1110;
+            try
+            {
+               name = name_insert.Text;
+                country = country_insert.Text;
+                website = website_insert.Text;
+                yoe = Convert.ToInt32(yoe_insert.Text);
+                var newProducer = new Producers(name, yoe, country, website);
 
+                ProducersRepo.Insert(newProducer);
+                producersListView.ItemsSource = ProducersRepo.GetAll();
+                producersListView.Items.Refresh();
+                //MessageBox.Show(producersListView.Items.Count.ToString(),name );
+            }
+            catch
+            {
+                MessageBox.Show(name, website);
+            }
         }
     }
 }
