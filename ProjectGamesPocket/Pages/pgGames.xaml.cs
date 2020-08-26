@@ -1,6 +1,7 @@
 ﻿using ProjectGamesPocket.DAL.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,11 +24,18 @@ namespace ProjectGamesPocket.Pages
         {
             InitializeComponent();
             gamesListView.ItemsSource = GamesRepo.GetAll();
+            
         }
 
         private void btnAddGame_Click(object sender, RoutedEventArgs e)
         {
+            pgAddGame pgAddGame = new pgAddGame();
+            NavigationService.Navigate(pgAddGame);
+        }
 
+        private void gamesListView_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            
         }
     }
 }

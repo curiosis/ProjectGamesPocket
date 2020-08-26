@@ -1,18 +1,9 @@
 ﻿using ProjectGamesPocket.DAL.Repositories;
 using ProjectGamesPocket.DAL.Entities;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Diagnostics;
+
 
 namespace ProjectGamesPocket.Pages
 {
@@ -44,7 +35,6 @@ namespace ProjectGamesPocket.Pages
                 ProducersRepo.Insert(newProducer);
                 producersListView.ItemsSource = ProducersRepo.GetAll();
                 producersListView.Items.Refresh();
-                //MessageBox.Show(producersListView.Items.Count.ToString(),name );
             }
             catch
             {

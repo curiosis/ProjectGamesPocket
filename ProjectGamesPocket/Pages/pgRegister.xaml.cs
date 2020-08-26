@@ -10,30 +10,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ProjectGamesPocket.DAL;
-using ProjectGamesPocket.Pages;
 
 namespace ProjectGamesPocket.Pages
 {
     /// <summary>
-    /// Logika interakcji dla klasy pgLogin.xaml
+    /// Logika interakcji dla klasy pgRegister.xaml
     /// </summary>
-    public partial class pgLogin : Page
+    public partial class pgRegister : Page
     {
-        public pgLogin()
+        public pgRegister()
         {
             InitializeComponent();
-        }
-
-        private void Next_button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_Register_Click(object sender, RoutedEventArgs e)
-        {
-            pgRegister pgregister = new pgRegister();
-            NavigationService.Navigate(pgregister);
         }
     }
 }

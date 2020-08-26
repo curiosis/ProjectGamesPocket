@@ -5,10 +5,164 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProjectGamesPocket.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="pgAddGame">
-
-    <Grid>
+      d:DesignHeight="800" 
+      d:DesignWidth="820"
+      Title="pgAddGame"
+      Background="#201f20">
+    <Page.Resources>
         
+        <Style x:Key="txtStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="Foreground" Value="#ff0089"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="txtBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="BorderThickness" Value="0 0 0 1"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="460"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+
+    </Page.Resources>
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Height="700" Width="710" VerticalAlignment="Top" Margin="55,10,0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Game Name -->
+                    <TextBlock Grid.Column="0" Grid.Row="0"
+                               Text="Name"
+                               Style="{StaticResource txtStyle}"/>
+                    <TextBox   Grid.Column="1" Grid.Row="0"
+                               x:Name="Name_textbox"
+                               Style="{StaticResource txtBoxStyle}"/>
+
+                    <!-- Publisher -->
+                    <TextBlock Grid.Column="0" Grid.Row="1"
+                               Text="Publisher"
+                               Style="{StaticResource txtStyle}"/>
+
+                    <TextBox   Grid.Column="1" Grid.Row="1"
+                               x:Name="publisher_textbox"
+                               Style="{StaticResource txtBoxStyle}"/>
+
+                    <!-- Producent -->
+                    <TextBlock Grid.Column="0" Grid.Row="2"
+                               Text="Producent"
+                               Style="{StaticResource txtStyle}"/>
+
+                    <TextBox   Grid.Column="1" Grid.Row="2"
+                               x:Name="producent_textbox"
+                               Style="{StaticResource txtBoxStyle}"/>
+
+                    <!-- Type -->
+                    <TextBlock Grid.Column="0" Grid.Row="3"
+                               Text="Type"
+                               Style="{StaticResource txtStyle}"/>
+                    <ComboBox  Grid.Column="1" Grid.Row="3"
+                               x:Name="type_combobox"
+                               FontSize="20"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               SelectedIndex="0"
+                               Width="300">
+                    </ComboBox>
+
+                    <!-- Price -->
+                    <TextBlock Grid.Column="0" Grid.Row="4"
+                               Text="Price"
+                               Style="{StaticResource txtStyle}"/>
+
+                    <TextBox   Grid.Column="1" Grid.Row="4"
+                               x:Name="price_textbox"
+                               Style="{StaticResource txtBoxStyle}"/>
+
+                    <!-- Release Date -->
+                    <TextBlock Grid.Column="0" Grid.Row="5"
+                               Text="Release_date"
+                               Style="{StaticResource txtStyle}"/>
+
+                    <DatePicker Name="dp1" Grid.Column="1" Grid.Row="5"
+                        SelectedDateFormat="Short"
+                  DisplayDateStart="1/01/80" DisplayDateEnd="10/09/20" 
+                  FirstDayOfWeek="Monday" Margin="0,25,0,0" BorderBrush="Transparent"/>
+
+                    <!-- Metacritics -->
+                    <TextBlock Grid.Column="0" Grid.Row="6"
+                               Text="Metacritics"
+                               Style="{StaticResource txtStyle}"/>
+
+                    <TextBox   Grid.Column="1" Grid.Row="6"
+                               x:Name="meta_textbox"
+                               Style="{StaticResource txtBoxStyle}"/>
+
+                    <!-- Exclusive -->
+                    <TextBlock Grid.Column="0" Grid.Row="7"
+                               Text="Exclusive"
+                               Style="{StaticResource txtStyle}"/>
+
+                    <ComboBox  Grid.Column="1" Grid.Row="7"
+                               x:Name="ex_combobox"
+                               FontSize="20"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               SelectedIndex="0"
+                               Width="300">
+
+                    </ComboBox>
+
+                    <!-- isSeries -->
+                    <TextBlock Grid.Column="0" Grid.Row="8"
+                               Text="IsSeries"
+                               Style="{StaticResource txtStyle}"/>
+
+                    <ComboBox  Grid.Column="1" Grid.Row="8"
+                               x:Name="isSeries_combobox"
+                               FontSize="20"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               SelectedIndex="0"
+                               Width="300">
+
+                    </ComboBox>
+
+                    <!-- PEGI -->
+                    <TextBlock Grid.Column="0" Grid.Row="9"
+                               Text="PEGI"
+                               Style="{StaticResource txtStyle}"/>
+
+                    <ComboBox  Grid.Column="1" Grid.Row="9"
+                               x:Name="pegi_combobox"
+                               FontSize="20"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               SelectedIndex="0"
+                               Width="300">
+
+                    </ComboBox>
+                </Grid>
+
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
 </Page>

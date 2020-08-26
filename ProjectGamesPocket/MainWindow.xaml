@@ -12,29 +12,56 @@
         ResizeMode="NoResize"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="btnStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="LightBlue" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="Border" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff0069" TargetName="Border" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+    
+    
     <Grid>
+        
+        
+        
         <!-- LEFT MENU PART -->
         <Grid Width="180"
               HorizontalAlignment="Left">
             <Image Source="/Assets/Images/GP_LeftBarBackground.png"/>
             <StackPanel Orientation="Vertical"
                         Margin="0,0,0,0"
-                        Background="White">
-                
+                        Background="#191819">
+
                 <!-- LOGIN BUTTON -->
                 <Button x:Name="btn_login"
                         BorderBrush="Transparent"
                         Background="Transparent"
-                        Margin="16,0"
-                        Click="btn_login_Click">
+                        Margin="16,20,16,0"
+                        Click="btn_login_Click"
+                        Style="{StaticResource btnStyle}">
                     <StackPanel>
-                        <Image Source="Assets/Icons/GP_iconLogin.png"
+                        <Image Source="Assets/Icons/GP_loginIcon.png"
                                Stretch="None" Width="112"
                                RenderTransformOrigin="0.5,0.5"/>
                         <TextBlock x:Name="txtb_login"
                                    Text="LOGIN"
                                    HorizontalAlignment="Center"
-                                   FontSize="20"/>
+                                   FontSize="20"
+                                   FontWeight="Bold"/>
                     </StackPanel>
                 </Button>
 
@@ -43,14 +70,16 @@
                         BorderBrush="Transparent"
                         Background="Transparent"
                         Margin="16,10"
-                        Click="btn_home_Click">
+                        Click="btn_home_Click"
+                        Style="{StaticResource btnStyle}">
                     <StackPanel>
                         <Image Source="Assets/Icons/GP_House.png"
                                Stretch="None"/>
                         <TextBlock x:Name="txtb_home"
                                    Text="HOME"
                                    HorizontalAlignment="Center"
-                                   FontSize="20"/>
+                                   FontSize="20"
+                                   FontWeight="Bold"/>
                     </StackPanel>
                 </Button>
 
@@ -60,14 +89,16 @@
                         Background="Transparent"
                         Margin="16,10"
                         Click="btn_account_Click"
-                        Visibility="Visible">
+                        Visibility="Visible"
+                        Style="{StaticResource btnStyle}">
                     <StackPanel>
                         <Image Source="Assets/Icons/GP_Account.png"
                                Stretch="None"/>
                         <TextBlock x:Name="txtb_account"
                                    Text="ACCOUNT"
                                    HorizontalAlignment="Center"
-                                   FontSize="20"/>
+                                   FontSize="20"
+                                   FontWeight="Bold"/>
                     </StackPanel>
                 </Button>
 
@@ -77,14 +108,16 @@
                         Background="Transparent"
                         Margin="16,10"
                         Click="btn_games_Click"
-                        Visibility="Visible">
+                        Visibility="Visible"
+                        Style="{StaticResource btnStyle}">
                     <StackPanel>
                         <Image Source="Assets/Icons/GP_Games.png"
                                Stretch="None"/>
                         <TextBlock x:Name="txtb_games"
                                    Text="GAMES"
                                    HorizontalAlignment="Center"
-                                   FontSize="20"/>
+                                   FontSize="20"
+                                   FontWeight="Bold"/>
                     </StackPanel>
                 </Button>
 
@@ -94,14 +127,16 @@
                         Background="Transparent"
                         Margin="16,10"
                         Click="btn_producer_Click"
-                        Visibility="Visible">
+                        Visibility="Visible"
+                        Style="{StaticResource btnStyle}">
                     <StackPanel>
                         <Image Source="Assets/Icons/GP_Producer.png"
                                Stretch="None"/>
                         <TextBlock x:Name="txtb_producer"
                                    Text="PRODUCERS"
                                    HorizontalAlignment="Center"
-                                   FontSize="20"/>
+                                   FontSize="20"
+                                   FontWeight="Bold"/>
                     </StackPanel>
                 </Button>
 
@@ -111,14 +146,16 @@
                         Background="Transparent"
                         Margin="16,10"
                         Click="btn_new_Click"
-                        Visibility="Visible">
+                        Visibility="Visible"
+                        Style="{StaticResource btnStyle}">
                     <StackPanel>
                         <Image Source="Assets/Icons/GP_New.png"
                                Stretch="None"/>
                         <TextBlock x:Name="txtb_new"
                                    Text="NEW"
                                    HorizontalAlignment="Center"
-                                   FontSize="20"/>
+                                   FontSize="20"
+                                   FontWeight="Bold"/>
                     </StackPanel>
                 </Button>
 
@@ -128,14 +165,16 @@
                         Background="Transparent"
                         Margin="16,10"
                         Click="btn_info_Click"
-                        Visibility="Visible">
+                        Visibility="Visible"
+                        Style="{StaticResource btnStyle}">
                     <StackPanel>
                         <Image Source="Assets/Icons/GP_Information.png"
                                Stretch="None"/>
                         <TextBlock x:Name="txtb_info"
                                    Text="INFO"
                                    HorizontalAlignment="Center"
-                                   FontSize="20"/>
+                                   FontSize="20"
+                                   FontWeight="Bold"/>
                     </StackPanel>
                 </Button>
 
@@ -143,35 +182,33 @@
                 <Button x:Name="btn_github"
                         BorderBrush="Transparent"
                         Background="Transparent"
-                        Margin="16,30,16,16"
+                        Margin="16,85,16,16"
                         Click="btn_github_Click"
-                        Visibility="Visible">
+                        Visibility="Visible"
+                        Style="{StaticResource btnStyle}">
                     <StackPanel>
                         <Image Source="Assets/Icons/GP_logout.png"
                                Stretch="None"/>
                         <TextBlock x:Name="txtb_github"
                                    Text="GITHUB"
                                    HorizontalAlignment="Center"
-                                   FontSize="20"/>
+                                   FontSize="20"
+                                   FontWeight="Bold"/>
                     </StackPanel>
                 </Button>
 
             </StackPanel>
-            
+
         </Grid>
 
         <Grid HorizontalAlignment="Right"
               VerticalAlignment="Bottom"
-              Height="750"
+              Height="800"
               Width="820">
-
-            <Image Source="/Assets/Images/GP_BackgroundLogin.png" 
-                   Height="840"
-                   Margin="0,-34,0,0"/>
 
             <Frame x:Name="Main"
                    NavigationUIVisibility="Hidden" 
-                   Margin="0,-36,0,0"/>
+                   Margin="0,0,0,0"/>
 
         </Grid>
 
@@ -189,7 +226,9 @@
                         Background="Transparent"
                         Margin="5"
                         Content="➖"
-                        FontSize="30" Click="Minimize_button_Click"/>
+                        FontSize="30" 
+                        Click="Minimize_button_Click"
+                        Style="{StaticResource btnStyle}"/>
 
                 <!-- Exit Button -->
                 <Button x:Name="Exit_button"
@@ -197,11 +236,15 @@
                         Background="Transparent"
                         Margin="5"
                         Content="❌"
-                        FontSize="30" Click="Exit_button_Click"/>
+                        Style="{StaticResource btnStyle}"
+                        FontSize="30" 
+                        Click="Exit_button_Click">
+                    
+                </Button>
 
             </StackPanel>
 
         </Grid>
-        
+
     </Grid>
 </Window>

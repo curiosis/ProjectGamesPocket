@@ -22,7 +22,7 @@ namespace ProjectGamesPocket.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ProjectGamesPocket.Properties {
         /// Zwraca buforowane wystąpienie ResourceManager używane przez tę klasę.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProjectGamesPocket.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace ProjectGamesPocket.Properties {
         ///   przypadków przeszukiwania zasobów za pomocą tej klasy zasobów wymagającej zdefiniowania typu.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,20 +61,326 @@ namespace ProjectGamesPocket.Properties {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Log In.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu No.
         /// </summary>
-        internal static string login {
+        public static string gameEx1 {
             get {
-                return ResourceManager.GetString("login", resourceCulture);
+                return ResourceManager.GetString("gameEx1", resourceCulture);
             }
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Name.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu GBA.
         /// </summary>
-        internal static string name {
+        public static string gameEx10 {
             get {
-                return ResourceManager.GetString("name", resourceCulture);
+                return ResourceManager.GetString("gameEx10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu PS2.
+        /// </summary>
+        public static string gameEx11 {
+            get {
+                return ResourceManager.GetString("gameEx11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu PS3.
+        /// </summary>
+        public static string gameEx12 {
+            get {
+                return ResourceManager.GetString("gameEx12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu PS4.
+        /// </summary>
+        public static string gameEx13 {
+            get {
+                return ResourceManager.GetString("gameEx13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu X360.
+        /// </summary>
+        public static string gameEx14 {
+            get {
+                return ResourceManager.GetString("gameEx14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu iOS.
+        /// </summary>
+        public static string gameEx15 {
+            get {
+                return ResourceManager.GetString("gameEx15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu AND.
+        /// </summary>
+        public static string gameEx16 {
+            get {
+                return ResourceManager.GetString("gameEx16", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu GCN.
+        /// </summary>
+        public static string gameEx17 {
+            get {
+                return ResourceManager.GetString("gameEx17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu PC.
+        /// </summary>
+        public static string gameEx18 {
+            get {
+                return ResourceManager.GetString("gameEx18", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Wii.
+        /// </summary>
+        public static string gameEx2 {
+            get {
+                return ResourceManager.GetString("gameEx2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Switch.
+        /// </summary>
+        public static string gameEx3 {
+            get {
+                return ResourceManager.GetString("gameEx3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu NDS.
+        /// </summary>
+        public static string gameEx4 {
+            get {
+                return ResourceManager.GetString("gameEx4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu PSP.
+        /// </summary>
+        public static string gameEx5 {
+            get {
+                return ResourceManager.GetString("gameEx5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu 3DS.
+        /// </summary>
+        public static string gameEx6 {
+            get {
+                return ResourceManager.GetString("gameEx6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu PS1.
+        /// </summary>
+        public static string gameEx7 {
+            get {
+                return ResourceManager.GetString("gameEx7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu PSV.
+        /// </summary>
+        public static string gameEx8 {
+            get {
+                return ResourceManager.GetString("gameEx8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu XBOX.
+        /// </summary>
+        public static string gameEx9 {
+            get {
+                return ResourceManager.GetString("gameEx9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu YES.
+        /// </summary>
+        public static string gameIsSeries1 {
+            get {
+                return ResourceManager.GetString("gameIsSeries1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu NO.
+        /// </summary>
+        public static string gameIsSeries2 {
+            get {
+                return ResourceManager.GetString("gameIsSeries2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu 3.
+        /// </summary>
+        public static string gamePEGI1 {
+            get {
+                return ResourceManager.GetString("gamePEGI1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu 7.
+        /// </summary>
+        public static string gamePEGI2 {
+            get {
+                return ResourceManager.GetString("gamePEGI2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu 12.
+        /// </summary>
+        public static string gamePEGI3 {
+            get {
+                return ResourceManager.GetString("gamePEGI3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu 16.
+        /// </summary>
+        public static string gamePEGI4 {
+            get {
+                return ResourceManager.GetString("gamePEGI4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu 18.
+        /// </summary>
+        public static string gamePEGI5 {
+            get {
+                return ResourceManager.GetString("gamePEGI5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Action.
+        /// </summary>
+        public static string gameType1 {
+            get {
+                return ResourceManager.GetString("gameType1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Racing.
+        /// </summary>
+        public static string gameType10 {
+            get {
+                return ResourceManager.GetString("gameType10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Fighting.
+        /// </summary>
+        public static string gameType11 {
+            get {
+                return ResourceManager.GetString("gameType11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Strategy.
+        /// </summary>
+        public static string gameType2 {
+            get {
+                return ResourceManager.GetString("gameType2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Party.
+        /// </summary>
+        public static string gameType3 {
+            get {
+                return ResourceManager.GetString("gameType3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Logic.
+        /// </summary>
+        public static string gameType4 {
+            get {
+                return ResourceManager.GetString("gameType4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu RPG.
+        /// </summary>
+        public static string gameType5 {
+            get {
+                return ResourceManager.GetString("gameType5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Arcade.
+        /// </summary>
+        public static string gameType6 {
+            get {
+                return ResourceManager.GetString("gameType6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Simulation.
+        /// </summary>
+        public static string gameType7 {
+            get {
+                return ResourceManager.GetString("gameType7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Adventure.
+        /// </summary>
+        public static string gameType8 {
+            get {
+                return ResourceManager.GetString("gameType8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Sport.
+        /// </summary>
+        public static string gameType9 {
+            get {
+                return ResourceManager.GetString("gameType9", resourceCulture);
             }
         }
     }

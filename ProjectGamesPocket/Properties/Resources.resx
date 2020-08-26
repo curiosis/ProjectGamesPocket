@@ -117,10 +117,112 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="login" xml:space="preserve">
-    <value>Log In</value>
+  <data name="gameEx1" xml:space="preserve">
+    <value>No</value>
   </data>
-  <data name="name" xml:space="preserve">
-    <value>Name</value>
+  <data name="gameEx10" xml:space="preserve">
+    <value>GBA</value>
+  </data>
+  <data name="gameEx11" xml:space="preserve">
+    <value>PS2</value>
+  </data>
+  <data name="gameEx12" xml:space="preserve">
+    <value>PS3</value>
+  </data>
+  <data name="gameEx13" xml:space="preserve">
+    <value>PS4</value>
+  </data>
+  <data name="gameEx14" xml:space="preserve">
+    <value>X360</value>
+  </data>
+  <data name="gameEx15" xml:space="preserve">
+    <value>iOS</value>
+  </data>
+  <data name="gameEx16" xml:space="preserve">
+    <value>AND</value>
+  </data>
+  <data name="gameEx17" xml:space="preserve">
+    <value>GCN</value>
+  </data>
+  <data name="gameEx18" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="gameEx2" xml:space="preserve">
+    <value>Wii</value>
+  </data>
+  <data name="gameEx3" xml:space="preserve">
+    <value>Switch</value>
+  </data>
+  <data name="gameEx4" xml:space="preserve">
+    <value>NDS</value>
+  </data>
+  <data name="gameEx5" xml:space="preserve">
+    <value>PSP</value>
+  </data>
+  <data name="gameEx6" xml:space="preserve">
+    <value>3DS</value>
+  </data>
+  <data name="gameEx7" xml:space="preserve">
+    <value>PS1</value>
+  </data>
+  <data name="gameEx8" xml:space="preserve">
+    <value>PSV</value>
+  </data>
+  <data name="gameEx9" xml:space="preserve">
+    <value>XBOX</value>
+  </data>
+  <data name="gameIsSeries1" xml:space="preserve">
+    <value>YES</value>
+  </data>
+  <data name="gameIsSeries2" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="gamePEGI1" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gamePEGI2" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="gamePEGI3" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="gamePEGI4" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="gamePEGI5" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="gameType1" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="gameType10" xml:space="preserve">
+    <value>Racing</value>
+  </data>
+  <data name="gameType11" xml:space="preserve">
+    <value>Fighting</value>
+  </data>
+  <data name="gameType2" xml:space="preserve">
+    <value>Strategy</value>
+  </data>
+  <data name="gameType3" xml:space="preserve">
+    <value>Party</value>
+  </data>
+  <data name="gameType4" xml:space="preserve">
+    <value>Logic</value>
+  </data>
+  <data name="gameType5" xml:space="preserve">
+    <value>RPG</value>
+  </data>
+  <data name="gameType6" xml:space="preserve">
+    <value>Arcade</value>
+  </data>
+  <data name="gameType7" xml:space="preserve">
+    <value>Simulation</value>
+  </data>
+  <data name="gameType8" xml:space="preserve">
+    <value>Adventure</value>
+  </data>
+  <data name="gameType9" xml:space="preserve">
+    <value>Sport</value>
   </data>
 </root>

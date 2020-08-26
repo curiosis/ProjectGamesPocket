@@ -14,16 +14,17 @@
     <None Remove="Assets\Icons\GP_CloseWindow.png" />
     <None Remove="Assets\Icons\GP_Games.png" />
     <None Remove="Assets\Icons\GP_House.png" />
-    <None Remove="Assets\Icons\GP_iconlogin.png" />
     <None Remove="Assets\Icons\GP_Information.png" />
     <None Remove="Assets\Icons\GP_locklogin.png" />
+    <None Remove="Assets\Icons\GP_loginIcon.png" />
     <None Remove="Assets\Icons\GP_Logout.png" />
     <None Remove="Assets\Icons\GP_Menu.png" />
     <None Remove="Assets\Icons\GP_New.png" />
     <None Remove="Assets\Icons\GP_Producer.png" />
     <None Remove="Assets\Icons\GP_Wallet.png" />
-    <None Remove="Assets\Images\GP_BackgroundLogin.png" />
-    <None Remove="Assets\Images\GP_LeftBarBackground.png" />
+    <None Remove="Assets\Images\GP_LoginBackground.png" />
+    <None Remove="Assets\Images\GP_mainBackgroundTitle.png" />
+    <None Remove="Assets\Images\GP_RegisterBackground.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,13 +55,13 @@
     <Resource Include="Assets\Icons\GP_House.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\Icons\GP_iconlogin.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Assets\Icons\GP_Information.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Icons\GP_locklogin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\GP_loginIcon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Icons\GP_Logout.png">
@@ -78,10 +79,13 @@
     <Resource Include="Assets\Icons\GP_Wallet.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\Images\GP_BackgroundLogin.png">
+    <Resource Include="Assets\Images\GP_LoginBackground.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\Images\GP_LeftBarBackground.png">
+    <Resource Include="Assets\Images\GP_mainBackgroundTitle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\GP_RegisterBackground.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
@@ -101,7 +105,7 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

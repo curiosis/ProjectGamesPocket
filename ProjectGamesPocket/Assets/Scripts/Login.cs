@@ -37,15 +37,15 @@ namespace ProjectGamesPocket.Assets.Scripts
         {
             if (s2 == "" && s1 != "")
             {
-                MessageBox.Show(Properties.Resources.login,
-                    Properties.Resources.login);
+                MessageBox.Show(Properties.Resources.gameType1,
+                    Properties.Resources.gameType1);
             }
             else
             {
                 if (s1 != s2)
                 {
-                    MessageBox.Show(Properties.Resources.login,
-                        Properties.Resources.login);
+                    MessageBox.Show(Properties.Resources.gameType1,
+                        Properties.Resources.gameType1);
                 }
             }
             return s1 == s2;
@@ -59,8 +59,8 @@ namespace ProjectGamesPocket.Assets.Scripts
 
             if (result == false)
             {
-                MessageBox.Show(Properties.Resources.login,
-                    Properties.Resources.login);
+                MessageBox.Show(Properties.Resources.gameType1,
+                    Properties.Resources.gameType1);
                 return false;
             }
             return true;
@@ -73,8 +73,8 @@ namespace ProjectGamesPocket.Assets.Scripts
 
             if (!result)
             {
-                MessageBox.Show(Properties.Resources.login,
-                    Properties.Resources.login);
+                MessageBox.Show(Properties.Resources.gameType1,
+                    Properties.Resources.gameType1);
                 return false;
             }
 
@@ -91,8 +91,8 @@ namespace ProjectGamesPocket.Assets.Scripts
 
             if (!result)
             {
-                MessageBox.Show(Properties.Resources.login,
-                    Properties.Resources.login);
+                MessageBox.Show(Properties.Resources.gameType1,
+                    Properties.Resources.gameType1);
                 return false;
             }
             return true;

@@ -10,6 +10,6 @@
       Title="pgHome">
 
     <Grid>
-        <Image Source="/Assets/Images/GP_BackgroundHome.png" Stretch="Fill"/>
+        <Image Source="/Assets/Images/GP_mainBackgroundTitle.png" Stretch="Fill"/>
     </Grid>
 </Page>

@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace ProjectGamesPocket
 {
@@ -20,7 +21,7 @@ namespace ProjectGamesPocket
             InitializeComponent();
             MouseDown += Window_MouseDown;
 
-            Main.Content = new pgLogin();
+            Main.Content = new pgHome();
         }
 
         private List<Object> PageList = new List<Object>();
@@ -89,6 +90,5 @@ namespace ProjectGamesPocket
                 Main.Content = newPage;
             }
         }
-
     }
 }
