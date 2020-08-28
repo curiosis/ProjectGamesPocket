@@ -30,46 +30,19 @@ namespace ProjectGamesPocket.DAL.Repositories
             return producers;
         }
 
-        public static List<Entities.Producers> Getby(string name, string country, int yoe)
+    
+
+    public static List<Entities.Producers> Getby(string name, string country, string yoe)
         {
             List<Entities.Producers> producers = new List<Entities.Producers>();
 
             using (var connection = DBConnection.Instance.Connection)
             {
-                MySqlCommand mySqlCommand;
-                if (name == "" && country == "" && yoe <= 0)
-                {
-                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers", connection);
-                }
-                else if (name != "" && country == "" && yoe <= 0)
-                {
-                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE NameProducer='{name}'", connection);
-                }
-                else if(name !="" & country != "" && yoe <= 0)
-                {
-                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE Country='{country}' AND NameProducer='{name}'", connection);
-                }
-                else if (name=="" &country != "" && yoe <= 0)
-                {
-                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE Country='{country}'", connection);
-                }
-                else if(name=="" & country == "" && yoe > 0)
-                {
-                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE YoE={yoe}", connection);
-                }
-                else if (name !="" && country == "" && yoe > 0)
-                {
-                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE NameProducer='{name}' AND YoE={yoe}", connection);
-                }
-                else if(name == "" && country != "" && yoe > 0)
-                {
-                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE Country='{country}' AND YoE={yoe}", connection);
-                }
-                else
-                {
-                    mySqlCommand = new MySqlCommand($"SELECT * FROM producers WHERE NameProducer='{name}' AND Country='{country}' AND YoE={yoe}", connection);
-                }
 
+                string commandSearch = $"SELECT* FROM producers WHERE(nameProducer LIKE '%{name}%' OR nameProducer LIKE '%{name}' OR nameProducer LIKE '{name}%') AND(Country LIKE '%{country}%' OR Country LIKE '%{country}' OR Country LIKE '{country}%') AND yoe='{yoe}'";
+                
+
+                MySqlCommand mySqlCommand = new MySqlCommand($"{commandSearch}", connection);
                 connection.Open();
                 var reader = mySqlCommand.ExecuteReader();
                 while (reader.Read())

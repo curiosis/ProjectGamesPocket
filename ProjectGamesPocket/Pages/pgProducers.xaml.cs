@@ -18,7 +18,11 @@ namespace ProjectGamesPocket.Pages
 
         private void buttonSearch_Click(object sender, RoutedEventArgs e)
         {
-            producersListView.ItemsSource = ProducersRepo.Getby(name_search.Text, country_search.Text, int.Parse(yoe_search.Text));
+            string name = name_search.Text;
+            string country = country_search.Text;
+            string yoe = yoe_search.Text;
+
+            producersListView.ItemsSource = ProducersRepo.Getby(name,country,yoe);
         }
         private void buttonInsert_Click(object sender, RoutedEventArgs e)
         {
@@ -40,6 +44,11 @@ namespace ProjectGamesPocket.Pages
             {
                 MessageBox.Show(name, website);
             }
+        }
+
+        private void buttonAll_Click(object sender, RoutedEventArgs e)
+        {
+            producersListView.ItemsSource = ProducersRepo.GetAll();
         }
     }
 }

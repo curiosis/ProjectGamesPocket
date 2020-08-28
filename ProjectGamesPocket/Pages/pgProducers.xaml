@@ -111,6 +111,7 @@
 
             <Button x:Name="btn_insert" Style="{StaticResource btnStyle}" FontWeight="Bold" Content="INSERT" Click="buttonInsert_Click" Height="20" Width="100" HorizontalAlignment="Right" Margin="0,-100,20,0"/>
             <Button x:Name="btn_search" Style="{StaticResource btnStyle}" FontWeight="Bold" Content="SEARCH" Click="buttonSearch_Click" Height="20" Width="100" HorizontalAlignment="Right" Margin="0,-40,20,0"/>
+            <Button x:Name="btn_all" Style="{StaticResource btnStyle}" FontWeight="Bold" Content="ALL" Click="buttonAll_Click" Height="20" Width="100" HorizontalAlignment="Right" Margin="0,0,20,0"/>
 
 
 

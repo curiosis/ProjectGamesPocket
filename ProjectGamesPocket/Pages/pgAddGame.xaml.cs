@@ -1,6 +1,10 @@
-﻿using System;
+﻿using ProjectGamesPocket.DAL.Entities;
+using ProjectGamesPocket.DAL.Repositories;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -25,7 +29,7 @@ namespace ProjectGamesPocket.Pages
             pegi_combobox.ItemsSource = ListPEGI();
             ex_combobox.ItemsSource = ListExclusive();
             isSeries_combobox.ItemsSource = ListIsSeries();
-            MessageBox.Show( "Age ratings are systems used to ensure that entertainment content, such as games, but also films, tv shows or mobile apps, is clearly labelled with a minimum age recommendation based on the content they have. These age ratings provide guidance to consumers, parents in particular, to help them decide whether or not to buy a particular product for a child.","xd");
+
         }
 
         private static List<string> ListType()
@@ -43,7 +47,7 @@ namespace ProjectGamesPocket.Pages
             listType.Add(Properties.Resources.gameType9);
             listType.Add(Properties.Resources.gameType10);
             listType.Add(Properties.Resources.gameType11);
-
+            
             return listType;
         }
 
@@ -94,6 +98,29 @@ namespace ProjectGamesPocket.Pages
             return listisSeries;
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            string name = Name_textbox.Text;
+            string publisher = publisher_textbox.Text;
+            string producer = producent_textbox.Text;
+            string type = type_combobox.SelectedItem.ToString();
+            double price = double.Parse(price_textbox.Text);
+            string date = Date();
+            int metacritics = int.Parse(meta_textbox.Text);
+            string exclusive = ex_combobox.Text;
+            string isSeries = isSeries_combobox.Text;
+            int pegi = int.Parse(pegi_combobox.Text);
+            MessageBox.Show(name + publisher + producer + type + price + date + metacritics + exclusive + isSeries + pegi, "xd");
+            var newGame = new Games(name, publisher, producer, type, price, date, metacritics, exclusive, isSeries, pegi);
+            GamesRepo.Insert(newGame);
+        }
+        
+        private string Date()
+        {
+            string s1 = dp1.SelectedDate.ToString();
+            return (s1.Substring(6, 4)+"-"+ s1.Substring(3, 2)+"-"+s1.Substring(0, 2));
+        }
     }
     
 }
