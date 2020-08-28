@@ -39,8 +39,12 @@ namespace ProjectGamesPocket.DAL.Repositories
             using (var connection = DBConnection.Instance.Connection)
             {
 
-                string commandSearch = $"SELECT* FROM producers WHERE(nameProducer LIKE '%{name}%' OR nameProducer LIKE '%{name}' OR nameProducer LIKE '{name}%') AND(Country LIKE '%{country}%' OR Country LIKE '%{country}' OR Country LIKE '{country}%') AND yoe='{yoe}'";
+                string commandSearch = $"SELECT* FROM producers WHERE(nameProducer LIKE '%{name}%' OR nameProducer LIKE '%{name}' OR nameProducer LIKE '{name}%') AND(Country LIKE '%{country}%' OR Country LIKE '%{country}' OR Country LIKE '{country}%')";
                 
+                if(yoe != "")
+                {
+                    commandSearch += $" AND yoe='{yoe}'";
+                }
 
                 MySqlCommand mySqlCommand = new MySqlCommand($"{commandSearch}", connection);
                 connection.Open();

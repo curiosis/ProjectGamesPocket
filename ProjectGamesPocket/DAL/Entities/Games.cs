@@ -121,8 +121,8 @@ namespace ProjectGamesPocket.DAL.Entities
         public string ToInsert()
         {
             var price = Price.ToString().Replace(',', '.');
-            return $"'{ID}','{Name}','{Publisher}','{Producer_id}','{Type}','{Price}','{ReleaseDate}','{Metacritics}'," +
-                $"'{Exclusive}','{IsSeries}','{PEGI}'";
+            return $"('{Name}','{Publisher}','{Producer_id}','{Type}','{Price}','{ReleaseDate}','{Metacritics}'," +
+                $"'{Exclusive}','{IsSeries}','{PEGI}')";
         }
 
         public override string ToString()

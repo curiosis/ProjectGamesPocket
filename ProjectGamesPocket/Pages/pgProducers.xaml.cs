@@ -26,8 +26,8 @@ namespace ProjectGamesPocket.Pages
         }
         private void buttonInsert_Click(object sender, RoutedEventArgs e)
         {
-            string name="", country="a", website="b";
-            int yoe=1110;
+            string name="", country="", website="";
+            int yoe=0;
             try
             {
                name = name_insert.Text;
@@ -44,11 +44,6 @@ namespace ProjectGamesPocket.Pages
             {
                 MessageBox.Show(name, website);
             }
-        }
-
-        private void buttonAll_Click(object sender, RoutedEventArgs e)
-        {
-            producersListView.ItemsSource = ProducersRepo.GetAll();
         }
     }
 }

@@ -100,20 +100,26 @@ namespace ProjectGamesPocket.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                string name = Name_textbox.Text;
+                string publisher = publisher_textbox.Text;
+                string producer = producent_textbox.Text;
+                string type = type_combobox.SelectedItem.ToString();
+                double price = double.Parse(price_textbox.Text);
+                string date = Date();
+                int metacritics = int.Parse(meta_textbox.Text);
+                string exclusive = ex_combobox.Text;
+                string isSeries = isSeries_combobox.Text;
+                int pegi = int.Parse(pegi_combobox.Text);
+                var newGame = new Games(name, publisher, producer, type, price, date, metacritics, exclusive, isSeries, pegi);
+                GamesRepo.Insert(newGame);
+            }
+            catch
+            {
 
-            string name = Name_textbox.Text;
-            string publisher = publisher_textbox.Text;
-            string producer = producent_textbox.Text;
-            string type = type_combobox.SelectedItem.ToString();
-            double price = double.Parse(price_textbox.Text);
-            string date = Date();
-            int metacritics = int.Parse(meta_textbox.Text);
-            string exclusive = ex_combobox.Text;
-            string isSeries = isSeries_combobox.Text;
-            int pegi = int.Parse(pegi_combobox.Text);
-            MessageBox.Show(name + publisher + producer + type + price + date + metacritics + exclusive + isSeries + pegi, "xd");
-            var newGame = new Games(name, publisher, producer, type, price, date, metacritics, exclusive, isSeries, pegi);
-            GamesRepo.Insert(newGame);
+            }
+            
         }
         
         private string Date()
@@ -122,5 +128,4 @@ namespace ProjectGamesPocket.Pages
             return (s1.Substring(6, 4)+"-"+ s1.Substring(3, 2)+"-"+s1.Substring(0, 2));
         }
     }
-    
 }
