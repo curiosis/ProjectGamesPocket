@@ -112,6 +112,7 @@ namespace ProjectGamesPocket.Pages
                 string exclusive = ex_combobox.Text;
                 string isSeries = isSeries_combobox.Text;
                 int pegi = int.Parse(pegi_combobox.Text);
+                MessageBox.Show(price.ToString(), "xd");
                 var newGame = new Games(name, publisher, producer, type, price, date, metacritics, exclusive, isSeries, pegi);
                 GamesRepo.Insert(newGame);
             }

@@ -20,20 +20,41 @@ namespace ProjectGamesPocket.Pages
     /// </summary>
     public partial class pgLogin : Page
     {
+        private string login, password;
+
         public pgLogin()
         {
             InitializeComponent();
-        }
-
-        private void Next_button_Click(object sender, RoutedEventArgs e)
-        {
-
+            //DBConnection.AdminLogin();
         }
 
         private void btn_Register_Click(object sender, RoutedEventArgs e)
         {
             pgRegister pgregister = new pgRegister();
             NavigationService.Navigate(pgregister);
+        }
+
+        private void btn_Login_Click(object sender, RoutedEventArgs e)
+        {
+            login = Login_textbox.Text;
+            password = Password_textbox.Password;
+
+            var hash = Assets.Scripts.Login.HashPassword(password);
+            var hashfromDB = Assets.Scripts.Login.GetPassword(login);
+            if (Assets.Scripts.Login.CheckPasswords(hash, hashfromDB))
+            {
+                Assets.Scripts.Login.loginStatus = true;
+                Assets.Scripts.Login.userLogin = login;
+
+                /*foreach (Window window in Application.Current.Windows)
+                {
+                    if (window.GetType() == typeof(MainWindow))
+                        (window as MainWindow).SetVisibilityAfterLogin();
+                }*/
+
+                pgHome newPage = new pgHome();
+                NavigationService.Navigate(newPage);
+            }
         }
     }
 }

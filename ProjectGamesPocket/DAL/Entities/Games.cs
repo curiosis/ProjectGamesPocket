@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
 
 namespace ProjectGamesPocket.DAL.Entities
 {
@@ -110,7 +111,7 @@ namespace ProjectGamesPocket.DAL.Entities
             Publisher = mySqlDataReader["publisher"].ToString();
             Producer_id = mySqlDataReader["producer"].ToString();
             Type = mySqlDataReader["type"].ToString();
-            Price = Math.Round(double.Parse(mySqlDataReader["price"].ToString()),5);
+            Price = double.Parse(mySqlDataReader["price"].ToString());
             ReleaseDate = mySqlDataReader["release_date"].ToString();
             Metacritics = int.Parse(mySqlDataReader["metacritics"].ToString());
             Exclusive = mySqlDataReader["exclusive"].ToString();
@@ -121,7 +122,8 @@ namespace ProjectGamesPocket.DAL.Entities
         public string ToInsert()
         {
             var price = Price.ToString().Replace(',', '.');
-            return $"('{Name}','{Publisher}','{Producer_id}','{Type}','{Price}','{ReleaseDate}','{Metacritics}'," +
+            MessageBox.Show(price.ToString(),"xd");
+            return $"('{Name}','{Publisher}','{Producer_id}','{Type}','{price}','{ReleaseDate}','{Metacritics}'," +
                 $"'{Exclusive}','{IsSeries}','{PEGI}')";
         }
 
