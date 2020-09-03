@@ -8,7 +8,7 @@ namespace ProjectGamesPocket.DAL.Repositories
     class ConnectorRepo
     {
         private const string GET_ALL = "SELECT * FROM CONNECTOR";
-        private const string INSERT = "REPLACE INTO CONNECTOR VALUES";
+        private const string INSERT = "INSERT INTO CONNECTOR (login, id_game) VALUES ";
 
         public static List<Entities.Connector> GetAll()
         {

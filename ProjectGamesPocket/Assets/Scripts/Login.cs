@@ -17,6 +17,7 @@ namespace ProjectGamesPocket.Assets.Scripts
         public static readonly int maxPasswordLength = 16;
 
         public static bool loginStatus = false;
+        public static Users CurrentUser;
 
         private static string login = "";
         public static string userLogin

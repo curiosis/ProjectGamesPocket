@@ -43,7 +43,7 @@ namespace ProjectGamesPocket.DAL.Entities
 
         public string ToInsert()
         {
-            return $"({ID},'{Login}','{ID_Game}')";
+            return $"('{Login}','{ID_Game}')";
         }
     }
 }

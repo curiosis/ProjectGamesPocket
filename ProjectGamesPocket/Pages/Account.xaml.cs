@@ -1,4 +1,5 @@
 ﻿using ProjectGamesPocket.Assets.Scripts;
+using ProjectGamesPocket.DAL.Entities;
 using ProjectGamesPocket.DAL.Repositories;
 using System;
 using System.Collections.Generic;
@@ -35,7 +36,7 @@ namespace ProjectGamesPocket.Pages
             }
             else
             {
-                result.Text = "INCORRECT";
+                result.Text = Assets.Scripts.Login.userLogin;
             }
         }
 
