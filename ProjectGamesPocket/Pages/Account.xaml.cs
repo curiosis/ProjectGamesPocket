@@ -1,4 +1,5 @@
 ﻿using ProjectGamesPocket.Assets.Scripts;
+using ProjectGamesPocket.DAL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -23,6 +24,7 @@ namespace ProjectGamesPocket.Pages
         public Account()
         {
             InitializeComponent();
+            gamesUserListView.ItemsSource = ConnectorRepo.GetAll();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -35,6 +37,11 @@ namespace ProjectGamesPocket.Pages
             {
                 result.Text = "INCORRECT";
             }
+        }
+
+        private void gamesUserListView_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

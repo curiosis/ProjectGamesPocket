@@ -11,18 +11,66 @@
       Background="#201f20">
 
     <Grid>
-        <StackPanel>
-            <StackPanel>
-                <Grid Height="100" Margin="10,10,0,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="2*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="1" x:Name="result" HorizontalAlignment="Left" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                </Grid>
-                
-            </StackPanel>
-            
+        <StackPanel VerticalAlignment="Bottom" Height="300" Margin="10,10,0,0">
+                    <ListView x:Name="gamesUserListView" Margin="10"
+                          ScrollViewer.VerticalScrollBarVisibility="Visible"
+                          ScrollViewer.CanContentScroll="False" PreviewMouseLeftButtonDown="gamesUserListView_PreviewMouseLeftButtonDown" Height="280">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListViewItem}">
+                                <Setter Property="BorderBrush" Value="LightGray" />
+                                <Setter Property="BorderThickness" Value="0 0 0 0" />
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.View>
+                            <GridView>
+                                <GridView.ColumnHeaderContainerStyle>
+                                    <Style TargetType="{x:Type GridViewColumnHeader}">
+                                        <Setter Property="TextElement.Foreground" Value="Black"/>
+                                        <Setter Property="Padding" Value="10 0 10 0"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                    </Style>
+                                </GridView.ColumnHeaderContainerStyle>
+
+                                <GridViewColumn Header="ID" 
+                                            DisplayMemberBinding="{Binding ID}" 
+                                            Width="auto"/>
+                                <GridViewColumn Header="Name" 
+                                            DisplayMemberBinding="{Binding Name}" 
+                                            Width="auto"/>
+                                <GridViewColumn Header="Publisher" 
+                                            DisplayMemberBinding="{Binding Publisher}" 
+                                            Width="auto"/>
+                                <GridViewColumn Header="Producer" 
+                                            DisplayMemberBinding="{Binding Producer_id}" 
+                                            Width="auto"/>
+                                <GridViewColumn Header="Type" 
+                                            DisplayMemberBinding="{Binding Type}" 
+                                            Width="auto"/>
+                                <GridViewColumn Header="Price (zł)" 
+                                            DisplayMemberBinding="{Binding Price}" 
+                                            Width="auto"/>
+                                <GridViewColumn Header="ReleaseDate" 
+                                            DisplayMemberBinding="{Binding ReleaseDate}" 
+                                            Width="auto"/>
+                                <GridViewColumn Header="Metacritic" 
+                                            DisplayMemberBinding="{Binding Metacritics}" 
+                                            Width="auto"/>
+                                <GridViewColumn Header="Exclusive" 
+                                            DisplayMemberBinding="{Binding Exclusive}" 
+                                            Width="auto"/>
+                                <GridViewColumn Header="isSeries" 
+                                            DisplayMemberBinding="{Binding IsSeries}" 
+                                            Width="auto"/>
+                                <GridViewColumn Header="PEGI" 
+                                            DisplayMemberBinding="{Binding PEGI}" 
+                                            Width="auto"/>
+
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+            <TextBlock Grid.Column="1" x:Name="result" HorizontalAlignment="Left" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+
         </StackPanel>
        
         <TextBox x:Name="check" HorizontalAlignment="Left" Margin="159,176,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
