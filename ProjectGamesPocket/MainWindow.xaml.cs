@@ -38,7 +38,7 @@ namespace ProjectGamesPocket
 
         private void btn_account_Click(object sender, RoutedEventArgs e)
         {
-
+            NewPage(new Account());
         }
 
         private void btn_games_Click(object sender, RoutedEventArgs e)

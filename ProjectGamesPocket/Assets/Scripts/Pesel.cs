@@ -136,7 +136,7 @@ namespace ProjectGamesPocket.Assets.Scripts
             return sum % 10;
         }
 
-        public static void PESEL(string PESELReadLine)
+        public static bool PESEL(string PESELReadLine)
         {
             List<int> PESELList;
             int PESELMonth;
@@ -146,7 +146,7 @@ namespace ProjectGamesPocket.Assets.Scripts
 
             if (!CheckPESELLength(PESELReadLine) || !CheckIfPESELContainsDigitsOnly(PESELReadLine))
             {
-                return;
+                return false;
             }
 
             PESELList = PESELReadLine.ToCharArray().Select(n => (int)char.GetNumericValue(n)).ToList();
@@ -157,8 +157,9 @@ namespace ProjectGamesPocket.Assets.Scripts
 
             if (!CheckIfMonthIsCorrect(PESELMonth) || !CheckIfDayIsCorrect(PESELDay, PESELMonth, PESELYear) || !PESELChecksum.Equals(ComputePESELChecksum(PESELList)))
             {
-                return;
+                return false;
             }
+            return true;
         }
     }
 }
