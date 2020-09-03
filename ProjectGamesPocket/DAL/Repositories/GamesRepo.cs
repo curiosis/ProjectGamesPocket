@@ -11,7 +11,7 @@ namespace ProjectGamesPocket.DAL.Repositories
     {
 
         public static string ADD_OPT = "WHERE ID = ";
-        private const string GET_ALL = "SELECT id_game, namegame, publisher, producer, type,price,release_date,metacritics,exclusive,isSeries,pegi FROM games WHERE";
+        private const string GET_ALL = "SELECT id_game, namegame, publisher, producer, type,price,release_date,metacritics,exclusive,isSeries,pegi FROM games";
         private const string INSERT = "INSERT INTO Games (namegame,publisher,producer,type,price,release_date,metacritics,exclusive,isSeries,pegi) VALUES";
 
         public static List<Entities.Games> GetAll()
@@ -27,6 +27,25 @@ namespace ProjectGamesPocket.DAL.Repositories
                 {
                     games.Add(new Entities.Games(reader));
                 }
+                connection.Close();
+            }
+            return games;
+        }
+
+        public static List<Entities.Games> GetByLogin(string login)
+        {
+            List<Entities.Games> games = new List<Entities.Games>();
+
+            using (var connection = DBConnection.Instance.Connection)
+            {
+                MySqlCommand command = new MySqlCommand($"SELECT G.* " +
+                    $"FROM GAMES G, CONNECTOR C " +
+                    $"WHERE C.LOGIN = '{login}' AND C.ID_GAME = G.ID_GAME", connection);
+
+                connection.Open();
+                var reader = command.ExecuteReader();
+                while (reader.Read())
+                    games.Add(new Entities.Games(reader));
                 connection.Close();
             }
             return games;

@@ -24,7 +24,7 @@ namespace ProjectGamesPocket.Pages
         public Account()
         {
             InitializeComponent();
-            gamesUserListView.ItemsSource = ConnectorRepo.GetAll();
+            gamesUserListView.ItemsSource = GamesRepo.GetByLogin(Assets.Scripts.Login.userLogin);
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
