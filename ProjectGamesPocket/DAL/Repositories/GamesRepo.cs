@@ -9,8 +9,9 @@ namespace ProjectGamesPocket.DAL.Repositories
 {
     class GamesRepo
     {
+
         public static string ADD_OPT = "WHERE ID = ";
-        private const string GET_ALL = "SELECT id_game, namegame, publisher, producer, type,price,release_date,metacritics,exclusive,isSeries,pegi FROM games";
+        private const string GET_ALL = "SELECT id_game, namegame, publisher, producer, type,price,release_date,metacritics,exclusive,isSeries,pegi FROM games WHERE";
         private const string INSERT = "INSERT INTO Games (namegame,publisher,producer,type,price,release_date,metacritics,exclusive,isSeries,pegi) VALUES";
 
         public static List<Entities.Games> GetAll()
