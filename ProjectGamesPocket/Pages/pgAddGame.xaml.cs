@@ -17,12 +17,9 @@ using System.Windows.Shapes;
 
 namespace ProjectGamesPocket.Pages
 {
-    /// <summary>
-    /// Logika interakcji dla klasy pgAddGame.xaml
-    /// </summary>
-    public partial class pgAddGame : Page
+    public partial class PgAddGame : Page
     {
-        public pgAddGame()
+        public PgAddGame()
         {
             InitializeComponent();
             type_combobox.ItemsSource = ListType();
@@ -34,76 +31,79 @@ namespace ProjectGamesPocket.Pages
 
         private static List<string> ListType()
         {
-            List<string> listType = new List<string>();
+            List<string> listType = new List<string>
+            {
+                Properties.Resources.gameType1,
+                Properties.Resources.gameType2,
+                Properties.Resources.gameType3,
+                Properties.Resources.gameType4,
+                Properties.Resources.gameType5,
+                Properties.Resources.gameType6,
+                Properties.Resources.gameType7,
+                Properties.Resources.gameType8,
+                Properties.Resources.gameType9,
+                Properties.Resources.gameType10,
+                Properties.Resources.gameType11
+            };
 
-            listType.Add(Properties.Resources.gameType1);
-            listType.Add(Properties.Resources.gameType2);
-            listType.Add(Properties.Resources.gameType3);
-            listType.Add(Properties.Resources.gameType4);
-            listType.Add(Properties.Resources.gameType5);
-            listType.Add(Properties.Resources.gameType6);
-            listType.Add(Properties.Resources.gameType7);
-            listType.Add(Properties.Resources.gameType8);
-            listType.Add(Properties.Resources.gameType9);
-            listType.Add(Properties.Resources.gameType10);
-            listType.Add(Properties.Resources.gameType11);
-            
             return listType;
         }
 
         private static List<string> ListExclusive()
         {
-            List<string> listExclusive = new List<string>();
-
-            listExclusive.Add(Properties.Resources.gameEx1);
-            listExclusive.Add(Properties.Resources.gameEx2);
-            listExclusive.Add(Properties.Resources.gameEx3);
-            listExclusive.Add(Properties.Resources.gameEx4);
-            listExclusive.Add(Properties.Resources.gameEx5);
-            listExclusive.Add(Properties.Resources.gameEx6);
-            listExclusive.Add(Properties.Resources.gameEx7);
-            listExclusive.Add(Properties.Resources.gameEx8);
-            listExclusive.Add(Properties.Resources.gameEx9);
-            listExclusive.Add(Properties.Resources.gameEx10);
-            listExclusive.Add(Properties.Resources.gameEx11);
-            listExclusive.Add(Properties.Resources.gameEx12);
-            listExclusive.Add(Properties.Resources.gameEx13);
-            listExclusive.Add(Properties.Resources.gameEx14);
-            listExclusive.Add(Properties.Resources.gameEx15);
-            listExclusive.Add(Properties.Resources.gameEx16);
-            listExclusive.Add(Properties.Resources.gameEx17);
-            listExclusive.Add(Properties.Resources.gameEx18);
+            List<string> listExclusive = new List<string>
+            {
+                Properties.Resources.gameEx1,
+                Properties.Resources.gameEx2,
+                Properties.Resources.gameEx3,
+                Properties.Resources.gameEx4,
+                Properties.Resources.gameEx5,
+                Properties.Resources.gameEx6,
+                Properties.Resources.gameEx7,
+                Properties.Resources.gameEx8,
+                Properties.Resources.gameEx9,
+                Properties.Resources.gameEx10,
+                Properties.Resources.gameEx11,
+                Properties.Resources.gameEx12,
+                Properties.Resources.gameEx13,
+                Properties.Resources.gameEx14,
+                Properties.Resources.gameEx15,
+                Properties.Resources.gameEx16,
+                Properties.Resources.gameEx17,
+                Properties.Resources.gameEx18
+            };
 
             return listExclusive;
         }
 
         private static List<string> ListPEGI()
         {
-            List<string> listpegi = new List<string>();
-            listpegi.Add(Properties.Resources.gamePEGI1);
-            listpegi.Add(Properties.Resources.gamePEGI2);
-            listpegi.Add(Properties.Resources.gamePEGI3);
-            listpegi.Add(Properties.Resources.gamePEGI4);
-            listpegi.Add(Properties.Resources.gamePEGI5);
+            List<string> listpegi = new List<string>
+            {
+                Properties.Resources.gamePEGI1,
+                Properties.Resources.gamePEGI2,
+                Properties.Resources.gamePEGI3,
+                Properties.Resources.gamePEGI4,
+                Properties.Resources.gamePEGI5
+            };
 
-            
+
             return listpegi;
         }
 
         private static List<string> ListIsSeries()
         {
-            List<string> listisSeries = new List<string>();
-            listisSeries.Add(Properties.Resources.gameIsSeries1);
-            listisSeries.Add(Properties.Resources.gameIsSeries2);
+            List<string> listisSeries = new List<string>
+            {
+                Properties.Resources.gameIsSeries1,
+                Properties.Resources.gameIsSeries2
+            };
             return listisSeries;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string name = "", publisher = "", producer = "";
-            double price = 0;
-            int metacritics=0, pegi=0;
-
+            string name;
             #region try/catch
 
             try
@@ -116,6 +116,7 @@ namespace ProjectGamesPocket.Pages
                 goto End;
             }
 
+            string publisher;
             try
             {
                 publisher = publisher_textbox.Text;
@@ -126,6 +127,7 @@ namespace ProjectGamesPocket.Pages
                 goto End;
             }
 
+            string producer;
             try
             {
                 producer = producent_textbox.Text;
@@ -136,6 +138,7 @@ namespace ProjectGamesPocket.Pages
                 goto End;
             }
 
+            double price;
             try
             {
                 price = double.Parse(price_textbox.Text);
@@ -146,6 +149,7 @@ namespace ProjectGamesPocket.Pages
                 goto End;
             }
 
+            int metacritics;
             try
             {
                 metacritics = int.Parse(meta_textbox.Text);
@@ -156,6 +160,7 @@ namespace ProjectGamesPocket.Pages
                 goto End;
             }
 
+            int pegi;
             try
             {
                 pegi = int.Parse(pegi_combobox.Text);

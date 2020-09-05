@@ -31,7 +31,7 @@ namespace ProjectGamesPocket.Pages
 
         private void btnAddGame_Click(object sender, RoutedEventArgs e)
         {
-            pgAddGame pgAddGame = new pgAddGame();
+            PgAddGame pgAddGame = new PgAddGame();
             NavigationService.Navigate(pgAddGame);
         }
 
