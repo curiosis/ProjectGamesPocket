@@ -113,6 +113,7 @@ namespace ProjectGamesPocket.Pages
             catch
             {
                 MessageBox.Show(Properties.Resources.errorAddGameChar + " 'Name'", Properties.Resources.errorError);
+                goto End;
             }
 
             try
@@ -122,6 +123,7 @@ namespace ProjectGamesPocket.Pages
             catch
             {
                 MessageBox.Show(Properties.Resources.errorAddGameChar + " 'Publisher'", Properties.Resources.errorError);
+                goto End;
             }
 
             try
@@ -131,6 +133,7 @@ namespace ProjectGamesPocket.Pages
             catch
             {
                 MessageBox.Show(Properties.Resources.errorAddGameChar + " 'Producer'", Properties.Resources.errorError);
+                goto End;
             }
 
             try
@@ -140,6 +143,7 @@ namespace ProjectGamesPocket.Pages
             catch
             {
                 MessageBox.Show(Properties.Resources.errorAddGameDouble + " 'Price'", Properties.Resources.errorError);
+                goto End;
             }
 
             try
@@ -149,6 +153,7 @@ namespace ProjectGamesPocket.Pages
             catch
             {
                 MessageBox.Show(Properties.Resources.errorAddGameInt + " 'Metacritics'", Properties.Resources.errorError);
+                goto End;
             }
 
             try
@@ -158,6 +163,7 @@ namespace ProjectGamesPocket.Pages
             catch
             {
                 MessageBox.Show(Properties.Resources.errorAddGameInt + " 'PEGI'", Properties.Resources.errorError);
+                goto End;
             }
 
             #endregion
@@ -176,6 +182,7 @@ namespace ProjectGamesPocket.Pages
             {
                 MessageBox.Show(Properties.Resources.errorAddGameNewGame, Properties.Resources.errorError);
             }
+        End:;
             
         }
         
