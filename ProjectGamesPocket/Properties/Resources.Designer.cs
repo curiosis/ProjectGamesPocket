@@ -61,6 +61,42 @@ namespace ProjectGamesPocket.Properties {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Not allowed characters in field .
+        /// </summary>
+        public static string errorAddGameChar {
+            get {
+                return ResourceManager.GetString("errorAddGameChar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Wrong format of double value in field.
+        /// </summary>
+        public static string errorAddGameDouble {
+            get {
+                return ResourceManager.GetString("errorAddGameDouble", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Wrong format of int value in field.
+        /// </summary>
+        public static string errorAddGameInt {
+            get {
+                return ResourceManager.GetString("errorAddGameInt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Game records can not be added!.
+        /// </summary>
+        public static string errorAddGameNewGame {
+            get {
+                return ResourceManager.GetString("errorAddGameNewGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Complete all fields!.
         /// </summary>
         public static string errorAllFields {

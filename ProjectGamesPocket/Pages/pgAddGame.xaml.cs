@@ -100,25 +100,81 @@ namespace ProjectGamesPocket.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string name = "", publisher = "", producer = "";
+            double price = 0;
+            int metacritics=0, pegi=0;
+
+            #region try/catch
+
             try
             {
-                string name = Name_textbox.Text;
-                string publisher = publisher_textbox.Text;
-                string producer = producent_textbox.Text;
-                string type = type_combobox.SelectedItem.ToString();
-                double price = double.Parse(price_textbox.Text);
+                name = Name_textbox.Text;
+            }
+            catch
+            {
+                MessageBox.Show(Properties.Resources.errorAddGameChar + " 'Name'", Properties.Resources.errorError);
+            }
+
+            try
+            {
+                publisher = publisher_textbox.Text;
+            }
+            catch
+            {
+                MessageBox.Show(Properties.Resources.errorAddGameChar + " 'Publisher'", Properties.Resources.errorError);
+            }
+
+            try
+            {
+                producer = producent_textbox.Text;
+            }
+            catch
+            {
+                MessageBox.Show(Properties.Resources.errorAddGameChar + " 'Producer'", Properties.Resources.errorError);
+            }
+
+            try
+            {
+                price = double.Parse(price_textbox.Text);
+            }
+            catch
+            {
+                MessageBox.Show(Properties.Resources.errorAddGameDouble + " 'Price'", Properties.Resources.errorError);
+            }
+
+            try
+            {
+                metacritics = int.Parse(meta_textbox.Text);
+            }
+            catch
+            {
+                MessageBox.Show(Properties.Resources.errorAddGameInt + " 'Metacritics'", Properties.Resources.errorError);
+            }
+
+            try
+            {
+                pegi = int.Parse(pegi_combobox.Text);
+            }
+            catch
+            {
+                MessageBox.Show(Properties.Resources.errorAddGameInt + " 'PEGI'", Properties.Resources.errorError);
+            }
+
+            #endregion
+
+            try
+            {
                 string date = Date();
-                int metacritics = int.Parse(meta_textbox.Text);
                 string exclusive = ex_combobox.Text;
                 string isSeries = isSeries_combobox.Text;
-                int pegi = int.Parse(pegi_combobox.Text);
-                MessageBox.Show(price.ToString(), "xd");
+                string type = type_combobox.SelectedItem.ToString();
+
                 var newGame = new Games(name, publisher, producer, type, price, date, metacritics, exclusive, isSeries, pegi);
                 GamesRepo.Insert(newGame);
             }
             catch
             {
-
+                MessageBox.Show(Properties.Resources.errorAddGameNewGame, Properties.Resources.errorError);
             }
             
         }
