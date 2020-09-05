@@ -47,6 +47,7 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="70"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="70"/>
@@ -99,6 +100,15 @@
                                SelectedIndex="0"
                                Width="300">
                     </ComboBox>
+                    <Button x:Name="btnInfoType" 
+                            Content="?" 
+                            Grid.Column="2" 
+                            HorizontalAlignment="Center" 
+                            Grid.Row="3" 
+                            VerticalAlignment="Center"  
+                            Height="30" Width="30" 
+                            FontWeight="Bold" FontSize="20"/>
+                    
 
                     <!-- Price -->
                     <TextBlock Grid.Column="0" Grid.Row="4"
@@ -108,6 +118,14 @@
                     <TextBox   Grid.Column="1" Grid.Row="4"
                                x:Name="price_textbox"
                                Style="{StaticResource txtBoxStyle}"/>
+                    <Button x:Name="btnInfoPrice" 
+                            Content="?" 
+                            Grid.Column="2" 
+                            HorizontalAlignment="Center" 
+                            Grid.Row="4" 
+                            VerticalAlignment="Center"  
+                            Height="30" Width="30" 
+                            FontWeight="Bold" FontSize="20"/>
 
                     <!-- Release Date -->
                     <TextBlock Grid.Column="0" Grid.Row="5"
@@ -119,6 +137,15 @@
                   DisplayDateStart="1/01/80" DisplayDateEnd="10/09/20" 
                   FirstDayOfWeek="Monday" Margin="0,25,0,0" BorderBrush="Transparent"/>
 
+                    <Button x:Name="btnInfoDate" 
+                            Content="?" 
+                            Grid.Column="2" 
+                            HorizontalAlignment="Center" 
+                            Grid.Row="5" 
+                            VerticalAlignment="Center"  
+                            Height="30" Width="30" 
+                            FontWeight="Bold" FontSize="20"/>
+
                     <!-- Metacritics -->
                     <TextBlock Grid.Column="0" Grid.Row="6"
                                Text="Metacritics"
@@ -127,6 +154,15 @@
                     <TextBox   Grid.Column="1" Grid.Row="6"
                                x:Name="meta_textbox"
                                Style="{StaticResource txtBoxStyle}"/>
+
+                    <Button x:Name="btnInfoMetacritics" 
+                            Content="?" 
+                            Grid.Column="2" 
+                            HorizontalAlignment="Center" 
+                            Grid.Row="6" 
+                            VerticalAlignment="Center"  
+                            Height="30" Width="30" 
+                            FontWeight="Bold" FontSize="20"/>
 
                     <!-- Exclusive -->
                     <TextBlock Grid.Column="0" Grid.Row="7"
@@ -140,8 +176,15 @@
                                VerticalAlignment="Center"
                                SelectedIndex="0"
                                Width="300">
-
                     </ComboBox>
+                    <Button x:Name="btnInfoExclusive" 
+                            Content="?" 
+                            Grid.Column="2" 
+                            HorizontalAlignment="Center" 
+                            Grid.Row="7" 
+                            VerticalAlignment="Center"  
+                            Height="30" Width="30" 
+                            FontWeight="Bold" FontSize="20"/>
 
                     <!-- isSeries -->
                     <TextBlock Grid.Column="0" Grid.Row="8"
@@ -155,8 +198,16 @@
                                VerticalAlignment="Center"
                                SelectedIndex="0"
                                Width="300">
-
                     </ComboBox>
+
+                    <Button x:Name="btnInfoIsSeries" 
+                            Content="?" 
+                            Grid.Column="2" 
+                            HorizontalAlignment="Center" 
+                            Grid.Row="8" 
+                            VerticalAlignment="Center"  
+                            Height="30" Width="30" 
+                            FontWeight="Bold" FontSize="20"/>
 
                     <!-- PEGI -->
                     <TextBlock Grid.Column="0" Grid.Row="9"
@@ -170,8 +221,16 @@
                                VerticalAlignment="Center"
                                SelectedIndex="0"
                                Width="300">
-
                     </ComboBox>
+                    <Button x:Name="btnInfoPEGI" 
+                            Content="?" 
+                            Grid.Column="2" 
+                            HorizontalAlignment="Center" 
+                            Grid.Row="9" 
+                            VerticalAlignment="Center"  
+                            Height="30" Width="30" 
+                            FontWeight="Bold" FontSize="20"/>
+                    
                 </Grid>
 
             </StackPanel>

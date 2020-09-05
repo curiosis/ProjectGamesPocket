@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace ProjectGamesPocket.Pages
 {
-    /// <summary>
-    /// Logika interakcji dla klasy pgGames.xaml
-    /// </summary>
     public partial class pgGames : Page
     {
         public pgGames()
