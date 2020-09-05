@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -20,7 +19,7 @@ namespace ProjectGamesPocket.Assets.Scripts
         public static Users CurrentUser;
 
         private static string login = "";
-        public static string userLogin
+        public static string UserLogin
         {
             get
             {
@@ -36,15 +35,15 @@ namespace ProjectGamesPocket.Assets.Scripts
         {
             if (s2 == "" && s1 != "")
             {
-                MessageBox.Show(Properties.Resources.gameType1,
-                    Properties.Resources.gameType1);
+                MessageBox.Show(Properties.Resources.errorAllFields,
+                    Properties.Resources.errorError);
             }
             else
             {
                 if (s1 != s2)
                 {
-                    MessageBox.Show(Properties.Resources.gameType1,
-                        Properties.Resources.gameType1);
+                    MessageBox.Show(Properties.Resources.errorPassMatch,
+                        Properties.Resources.errorError);
                 }
             }
             return s1 == s2;
@@ -58,8 +57,8 @@ namespace ProjectGamesPocket.Assets.Scripts
 
             if (result == false)
             {
-                MessageBox.Show(Properties.Resources.gameType1,
-                    Properties.Resources.gameType1);
+                MessageBox.Show(Properties.Resources.errorPassDesign,
+                    Properties.Resources.errorError);
                 return false;
             }
             return true;
@@ -72,8 +71,8 @@ namespace ProjectGamesPocket.Assets.Scripts
 
             if (!result)
             {
-                MessageBox.Show(Properties.Resources.gameType1,
-                    Properties.Resources.gameType1);
+                MessageBox.Show(Properties.Resources.errorPassLen,
+                    Properties.Resources.errorError);
                 return false;
             }
 
@@ -90,8 +89,8 @@ namespace ProjectGamesPocket.Assets.Scripts
 
             if (!result)
             {
-                MessageBox.Show(Properties.Resources.gameType1,
-                    Properties.Resources.gameType1);
+                MessageBox.Show(Properties.Resources.errorLogLen,
+                    Properties.Resources.errorError);
                 return false;
             }
             return true;

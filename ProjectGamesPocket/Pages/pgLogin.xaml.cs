@@ -44,7 +44,7 @@ namespace ProjectGamesPocket.Pages
             if (Assets.Scripts.Login.CheckPasswords(hash, hashfromDB))
             {
                 Assets.Scripts.Login.loginStatus = true;
-                Assets.Scripts.Login.userLogin = login;
+                Assets.Scripts.Login.UserLogin = login;
 
                 /*foreach (Window window in Application.Current.Windows)
                 {

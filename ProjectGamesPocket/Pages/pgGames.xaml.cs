@@ -48,7 +48,7 @@ namespace ProjectGamesPocket.Pages
 
             foreach (var user in UserList)
             {
-                if (Assets.Scripts.Login.userLogin == user.Login)
+                if (Assets.Scripts.Login.UserLogin == user.Login)
                 {
                     User = new Users(user);
                     break;
@@ -65,7 +65,7 @@ namespace ProjectGamesPocket.Pages
 
             private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Connector connector = new Connector(Assets.Scripts.Login.userLogin, int.Parse(index.Text));
+            Connector connector = new Connector(Assets.Scripts.Login.UserLogin, int.Parse(index.Text));
             ConnectorRepo.Insert(connector);
             MessageBox.Show("Game was added to your account!");
         }

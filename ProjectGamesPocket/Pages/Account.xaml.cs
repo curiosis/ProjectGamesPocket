@@ -25,7 +25,7 @@ namespace ProjectGamesPocket.Pages
         public Account()
         {
             InitializeComponent();
-            gamesUserListView.ItemsSource = GamesRepo.GetByLogin(Assets.Scripts.Login.userLogin);
+            gamesUserListView.ItemsSource = GamesRepo.GetByLogin(Assets.Scripts.Login.UserLogin);
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -36,7 +36,7 @@ namespace ProjectGamesPocket.Pages
             }
             else
             {
-                result.Text = Assets.Scripts.Login.userLogin;
+                result.Text = Assets.Scripts.Login.UserLogin;
             }
         }
 

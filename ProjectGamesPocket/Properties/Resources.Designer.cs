@@ -61,6 +61,60 @@ namespace ProjectGamesPocket.Properties {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Complete all fields!.
+        /// </summary>
+        public static string errorAllFields {
+            get {
+                return ResourceManager.GetString("errorAllFields", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Error.
+        /// </summary>
+        public static string errorError {
+            get {
+                return ResourceManager.GetString("errorError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu The minimum login length is 5, and the maximum is 15.
+        /// </summary>
+        public static string errorLogLen {
+            get {
+                return ResourceManager.GetString("errorLogLen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu The password should contain at least one uppercase letter, one lowercase letter and one number!.
+        /// </summary>
+        public static string errorPassDesign {
+            get {
+                return ResourceManager.GetString("errorPassDesign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu The minimum password length is 6 and the maximum is 16.
+        /// </summary>
+        public static string errorPassLen {
+            get {
+                return ResourceManager.GetString("errorPassLen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Passwords do not match!.
+        /// </summary>
+        public static string errorPassMatch {
+            get {
+                return ResourceManager.GetString("errorPassMatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu No.
         /// </summary>
         public static string gameEx1 {

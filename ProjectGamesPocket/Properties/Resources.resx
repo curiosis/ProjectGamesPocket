@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="errorAllFields" xml:space="preserve">
+    <value>Complete all fields!</value>
+  </data>
+  <data name="errorError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="errorLogLen" xml:space="preserve">
+    <value>The minimum login length is 5, and the maximum is 15</value>
+  </data>
+  <data name="errorPassDesign" xml:space="preserve">
+    <value>The password should contain at least one uppercase letter, one lowercase letter and one number!</value>
+  </data>
+  <data name="errorPassLen" xml:space="preserve">
+    <value>The minimum password length is 6 and the maximum is 16</value>
+  </data>
+  <data name="errorPassMatch" xml:space="preserve">
+    <value>Passwords do not match!</value>
+  </data>
   <data name="gameEx1" xml:space="preserve">
     <value>No</value>
   </data>
