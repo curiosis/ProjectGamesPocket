@@ -1,7 +1,9 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Google.Protobuf;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
 
 namespace ProjectGamesPocket.DAL.Repositories
 {
@@ -33,7 +35,7 @@ namespace ProjectGamesPocket.DAL.Repositories
                 //var command_GrantContains = new MySqlCommand($"GRANT SELECT ON CONTAINS TO '{Login}'", connection);
                 var command_GrantGames = new MySqlCommand($"GRANT SELECT ON games TO '{Login}'", connection);
                 var command_GrantProducers = new MySqlCommand($"GRANT SELECT ON producers TO '{Login}'", connection);
-                var command_AddUser = new MySqlCommand($"INSERT INTO USERS (LOGIN, PASSWORD, AGE, MONEY) VALUES ('{Login}', '{Password}', 0, 0)", connection);
+                var command_AddUser = new MySqlCommand($"INSERT INTO USERS (LOGIN, PASSWORD, MONEY) VALUES ('{Login}', '{Password}',0)", connection);
 
                 connection.Open();
                 command_CreateUser.ExecuteNonQuery();
@@ -52,11 +54,12 @@ namespace ProjectGamesPocket.DAL.Repositories
             bool condition = false;
             using (var connection = DBConnection.Instance.Connection)
             {
-                var money = Convert.ToDouble(user.Money.ToString().Replace(',', '.'));
-
+                var money = Convert.ToDouble(user.Money.ToString());
+                double sum = money + addMoney;
+                string strdub = sum.ToString().Replace(',', '.');
 
                 var command_AddUser = new MySqlCommand($"UPDATE USERS SET " +
-                    $"MONEY={money+addMoney} WHERE LOGIN='{user.Login}'", connection);
+                    $"MONEY={strdub} WHERE LOGIN='{user.Login}'", connection);
 
                 connection.Open();
                 command_AddUser.ExecuteNonQuery();

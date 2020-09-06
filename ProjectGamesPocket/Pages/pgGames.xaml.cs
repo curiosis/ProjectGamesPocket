@@ -19,8 +19,8 @@ namespace ProjectGamesPocket.Pages
 {
     public partial class pgGames : Page
     {
-        uint age;
-
+        string moneyValue;
+        Users User = null;
         public pgGames()
         {
             InitializeComponent();
@@ -41,7 +41,7 @@ namespace ProjectGamesPocket.Pages
         {
             var UserList = UsersRepo.GetAll();
 
-            Users User = null;
+            
 
             foreach (var user in UserList)
             {
@@ -53,8 +53,8 @@ namespace ProjectGamesPocket.Pages
             }
             if (User != null)
             {
-                //age = User.Age;
-                txtMoney.Text = "Your money: "+ User.Money.ToString() +"zł";
+                moneyValue = User.Money.ToString();
+                txtMoney.Text = "Your money: "+ (Math.Round(Convert.ToDouble(moneyValue),2)).ToString() +"zł";
 
 
                 Assets.Scripts.Login.CurrentUser = User;
@@ -63,12 +63,27 @@ namespace ProjectGamesPocket.Pages
 
             private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Connector connector = new Connector(Assets.Scripts.Login.UserLogin, int.Parse(index.Text));
-            ConnectorRepo.Insert(connector);
-            MessageBox.Show("Game was added to your account!");
+            if(Convert.ToDouble(GamePrice) <= Convert.ToDouble(moneyValue))
+            {
+                try
+                {
+                    Connector connector = new Connector(Assets.Scripts.Login.UserLogin, Convert.ToInt32(GameID));
+                    ConnectorRepo.Insert(connector);
+                    Users user = new Users(Assets.Scripts.Login.UserLogin, User.Money);
+                    UsersRepo.Update(user, -1*Convert.ToDouble(GamePrice));
+                    MessageBox.Show("Game was added to your account!");
+                    SetData();
+                }
+                catch
+                {
+
+                }
+            }
+
         }
 
         private static int? GameID = null;
+        private static double? GamePrice = null;
 
         private void gamesListView_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
@@ -76,8 +91,9 @@ namespace ProjectGamesPocket.Pages
             {
                 if ((sender as ListView).SelectedItem is DAL.Entities.Games selectedGame)
                 {
-                    GameID = Convert.ToInt32(selectedGame.Name);
-                    kasa.Text = GameID.ToString();
+                    xd.Text = (Math.Round(Convert.ToDouble(selectedGame.Price)),2).ToString();
+                    GameID = Convert.ToInt32(selectedGame.ID);
+                    GamePrice = Convert.ToDouble(selectedGame.Price);
                 }
             }
             catch
