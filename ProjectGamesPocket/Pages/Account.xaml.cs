@@ -22,6 +22,7 @@ namespace ProjectGamesPocket.Pages
     public partial class Account : Page
     {
         Users User = null;
+        string moneyValue;
         public Account()
         {
             InitializeComponent();
@@ -33,14 +34,9 @@ namespace ProjectGamesPocket.Pages
         {
             if (Assets.Scripts.Pesel.PESEL(check.Text))
             {
-                result.Text = "CORRECT";
                 Users user = new Users(Assets.Scripts.Login.UserLogin, User.Money);
                 UsersRepo.Update(user,100);
                 SetData();
-            }
-            else
-            {
-                result.Text = Assets.Scripts.Login.UserLogin;
             }
         }
 
@@ -65,9 +61,8 @@ namespace ProjectGamesPocket.Pages
             }
             if (User != null)
             {
-                //age = User.Age;
-                actualna.Text = User.Money.ToString();
-
+                moneyValue = User.Money.ToString();
+                actualna.Text = (Math.Round(Convert.ToDouble(moneyValue), 2)).ToString();
 
                 Assets.Scripts.Login.CurrentUser = User;
             }

@@ -11,72 +11,88 @@
       Background="#201f20">
 
     <Grid>
-        <StackPanel VerticalAlignment="Bottom" Height="300" Margin="10,10,0,0">
-                    <ListView x:Name="gamesUserListView" Margin="10"
-                          ScrollViewer.VerticalScrollBarVisibility="Visible"
-                          ScrollViewer.CanContentScroll="False" PreviewMouseLeftButtonDown="gamesUserListView_PreviewMouseLeftButtonDown" Height="280">
-                        <ListView.ItemContainerStyle>
-                            <Style TargetType="{x:Type ListViewItem}">
-                                <Setter Property="BorderBrush" Value="LightGray" />
-                                <Setter Property="BorderThickness" Value="0 0 0 0" />
-                            </Style>
-                        </ListView.ItemContainerStyle>
-                        <ListView.View>
-                            <GridView>
-                                <GridView.ColumnHeaderContainerStyle>
-                                    <Style TargetType="{x:Type GridViewColumnHeader}">
-                                        <Setter Property="TextElement.Foreground" Value="Black"/>
-                                        <Setter Property="Padding" Value="10 0 10 0"/>
-                                        <Setter Property="FontWeight" Value="Bold"/>
-                                    </Style>
-                                </GridView.ColumnHeaderContainerStyle>
+        <StackPanel VerticalAlignment="Top" Height="300">
+            <Grid Height="290" Margin="0,0,10,0" HorizontalAlignment="Center" Width="750">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <TextBox Grid.Row="1" Grid.Column="0" x:Name="check" HorizontalAlignment="Center"  Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="220" Height="30" FontSize="24"/>
+                <Button x:Name="button" Content="Check!" HorizontalAlignment="Center" VerticalAlignment="Top" Click="button_Click" Grid.Column="0" Grid.Row="2" Height="30" Width="70" FontWeight="Bold" FontSize="20"/>
+                <TextBlock Grid.Column="1"  HorizontalAlignment="Center" Text="Your money:" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" FontSize="25" Foreground="#767576"/>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="Enter your code" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" FontSize="25" Foreground="#767576"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" x:Name="actualna" Text="" TextWrapping="Wrap" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#767576" FontWeight="Bold" FontSize="25" Height="30"/>
+            </Grid>
 
-                                <GridViewColumn Header="ID" 
+        </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" Height="450" Margin="10,0,0,0">
+            <ListView x:Name="gamesUserListView" Margin="10"
+                          ScrollViewer.VerticalScrollBarVisibility="Visible"
+                          ScrollViewer.CanContentScroll="False" PreviewMouseLeftButtonDown="gamesUserListView_PreviewMouseLeftButtonDown" Height="430">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListViewItem}">
+                        <Setter Property="BorderBrush" Value="LightGray" />
+                        <Setter Property="BorderThickness" Value="0 0 0 0" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.View>
+                    <GridView>
+                        <GridView.ColumnHeaderContainerStyle>
+                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                <Setter Property="TextElement.Foreground" Value="Black"/>
+                                <Setter Property="Padding" Value="10 0 10 0"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                            </Style>
+                        </GridView.ColumnHeaderContainerStyle>
+
+                        <GridViewColumn Header="ID" 
                                             DisplayMemberBinding="{Binding ID}" 
                                             Width="auto"/>
-                                <GridViewColumn Header="Name" 
+                        <GridViewColumn Header="Name" 
                                             DisplayMemberBinding="{Binding Name}" 
                                             Width="auto"/>
-                                <GridViewColumn Header="Publisher" 
+                        <GridViewColumn Header="Publisher" 
                                             DisplayMemberBinding="{Binding Publisher}" 
                                             Width="auto"/>
-                                <GridViewColumn Header="Producer" 
+                        <GridViewColumn Header="Producer" 
                                             DisplayMemberBinding="{Binding Producer_id}" 
                                             Width="auto"/>
-                                <GridViewColumn Header="Type" 
+                        <GridViewColumn Header="Type" 
                                             DisplayMemberBinding="{Binding Type}" 
                                             Width="auto"/>
-                                <GridViewColumn Header="Price (zł)" 
+                        <GridViewColumn Header="Price (zł)" 
                                             DisplayMemberBinding="{Binding Price}" 
                                             Width="auto"/>
-                                <GridViewColumn Header="ReleaseDate" 
+                        <GridViewColumn Header="ReleaseDate" 
                                             DisplayMemberBinding="{Binding ReleaseDate}" 
                                             Width="auto"/>
-                                <GridViewColumn Header="Metacritic" 
+                        <GridViewColumn Header="Metacritic" 
                                             DisplayMemberBinding="{Binding Metacritics}" 
                                             Width="auto"/>
-                                <GridViewColumn Header="Exclusive" 
+                        <GridViewColumn Header="Exclusive" 
                                             DisplayMemberBinding="{Binding Exclusive}" 
                                             Width="auto"/>
-                                <GridViewColumn Header="isSeries" 
+                        <GridViewColumn Header="isSeries" 
                                             DisplayMemberBinding="{Binding IsSeries}" 
                                             Width="auto"/>
-                                <GridViewColumn Header="PEGI" 
+                        <GridViewColumn Header="PEGI" 
                                             DisplayMemberBinding="{Binding PEGI}" 
                                             Width="auto"/>
 
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
-            
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
 
 
         </StackPanel>
-       
-        <TextBox x:Name="check" HorizontalAlignment="Left" Margin="159,176,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="354,285,0,0" VerticalAlignment="Top" Click="button_Click"/>
-        <TextBlock Grid.Column="1" x:Name="result" HorizontalAlignment="Left" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock Grid.Column="1" x:Name="actualna" HorizontalAlignment="Left" Text="xd" TextWrapping="Wrap" VerticalAlignment="Top" Margin="40"/>
+
+        
 
     </Grid>
 </Page>

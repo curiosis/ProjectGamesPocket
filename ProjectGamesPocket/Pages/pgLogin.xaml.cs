@@ -46,11 +46,11 @@ namespace ProjectGamesPocket.Pages
                 Assets.Scripts.Login.loginStatus = true;
                 Assets.Scripts.Login.UserLogin = login;
 
-                /*foreach (Window window in Application.Current.Windows)
+                foreach (Window window in Application.Current.Windows)
                 {
                     if (window.GetType() == typeof(MainWindow))
                         (window as MainWindow).SetVisibilityAfterLogin();
-                }*/
+                }
 
                 pgHome newPage = new pgHome();
                 NavigationService.Navigate(newPage);

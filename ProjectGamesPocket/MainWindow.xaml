@@ -89,7 +89,7 @@
                         Background="Transparent"
                         Margin="16,10"
                         Click="btn_account_Click"
-                        Visibility="Visible"
+                        Visibility="Hidden"
                         Style="{StaticResource btnStyle}">
                     <StackPanel>
                         <Image Source="Assets/Icons/GP_Account.png"
@@ -108,7 +108,7 @@
                         Background="Transparent"
                         Margin="16,10"
                         Click="btn_games_Click"
-                        Visibility="Visible"
+                        Visibility="Hidden"
                         Style="{StaticResource btnStyle}">
                     <StackPanel>
                         <Image Source="Assets/Icons/GP_Games.png"
@@ -127,7 +127,7 @@
                         Background="Transparent"
                         Margin="16,10"
                         Click="btn_producer_Click"
-                        Visibility="Visible"
+                        Visibility="Hidden"
                         Style="{StaticResource btnStyle}">
                     <StackPanel>
                         <Image Source="Assets/Icons/GP_Producer.png"

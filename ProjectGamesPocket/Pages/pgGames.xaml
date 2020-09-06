@@ -89,7 +89,6 @@
             <Grid Width="750" Height="25" HorizontalAlignment="Center">
                 <Button Content="BUY GAME" Click="Button_Click" Width="185" HorizontalAlignment="Left"/>
                 <Button x:Name="btnAddGame" Content="ADD NEW GAME" Width="185" HorizontalAlignment="Right" Click="btnAddGame_Click"/>
-                <TextBlock x:Name="xd" HorizontalAlignment="Left" Margin="233,0,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center"/>
             </Grid>
 
 

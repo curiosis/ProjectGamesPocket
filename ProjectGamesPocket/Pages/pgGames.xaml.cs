@@ -91,7 +91,6 @@ namespace ProjectGamesPocket.Pages
             {
                 if ((sender as ListView).SelectedItem is DAL.Entities.Games selectedGame)
                 {
-                    xd.Text = (Math.Round(Convert.ToDouble(selectedGame.Price)),2).ToString();
                     GameID = Convert.ToInt32(selectedGame.ID);
                     GamePrice = Convert.ToDouble(selectedGame.Price);
                 }

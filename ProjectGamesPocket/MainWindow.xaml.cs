@@ -90,5 +90,13 @@ namespace ProjectGamesPocket
                 Main.Content = newPage;
             }
         }
+
+        public void SetVisibilityAfterLogin()
+        {
+            btn_account.Visibility = Visibility.Visible;
+            btn_producer.Visibility = Visibility.Visible;
+            btn_games.Visibility = Visibility.Visible;
+            btn_login.IsEnabled = false;
+        }
     }
 }
