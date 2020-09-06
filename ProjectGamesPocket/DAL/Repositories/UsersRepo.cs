@@ -47,15 +47,16 @@ namespace ProjectGamesPocket.DAL.Repositories
             return condition;
         }
 
-        public static bool Update(Entities.Users user)
+        public static bool Update(Entities.Users user,double addMoney)
         {
             bool condition = false;
             using (var connection = DBConnection.Instance.Connection)
             {
-                var money = user.Money.ToString().Replace(',', '.');
+                var money = Convert.ToDouble(user.Money.ToString().Replace(',', '.'));
+
 
                 var command_AddUser = new MySqlCommand($"UPDATE USERS SET " +
-                    $"AGE={user.Age}, WEIGHT={money} WHERE LOGIN='{user.Login}'", connection);
+                    $"MONEY={money+addMoney} WHERE LOGIN='{user.Login}'", connection);
 
                 connection.Open();
                 command_AddUser.ExecuteNonQuery();

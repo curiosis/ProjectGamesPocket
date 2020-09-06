@@ -21,11 +21,12 @@ namespace ProjectGamesPocket.Pages
     /// </summary>
     public partial class Account : Page
     {
-
+        Users User = null;
         public Account()
         {
             InitializeComponent();
             gamesUserListView.ItemsSource = GamesRepo.GetByLogin(Assets.Scripts.Login.UserLogin);
+            SetData();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -33,6 +34,9 @@ namespace ProjectGamesPocket.Pages
             if (Assets.Scripts.Pesel.PESEL(check.Text))
             {
                 result.Text = "CORRECT";
+                Users user = new Users(Assets.Scripts.Login.UserLogin, User.Money);
+                UsersRepo.Update(user,100);
+                SetData();
             }
             else
             {
@@ -44,5 +48,30 @@ namespace ProjectGamesPocket.Pages
         {
 
         }
+
+        private void SetData()
+        {
+            var UserList = UsersRepo.GetAll();
+
+            
+
+            foreach (var user in UserList)
+            {
+                if (Assets.Scripts.Login.UserLogin == user.Login)
+                {
+                    User = new Users(user);
+                    break;
+                }
+            }
+            if (User != null)
+            {
+                //age = User.Age;
+                actualna.Text = User.Money.ToString();
+
+
+                Assets.Scripts.Login.CurrentUser = User;
+            }
+        }
     }
 }
+

@@ -1,4 +1,5 @@
-﻿using ProjectGamesPocket.DAL.Entities;
+﻿using ProjectGamesPocket.Assets.Scripts;
+using ProjectGamesPocket.DAL.Entities;
 using ProjectGamesPocket.DAL.Repositories;
 using System;
 using System.Collections.Generic;
@@ -18,11 +19,14 @@ namespace ProjectGamesPocket.Pages
 {
     public partial class pgGames : Page
     {
+        uint age;
+
         public pgGames()
         {
             InitializeComponent();
-            gamesListView.ItemsSource = GamesRepo.GetAll();
             SetData();
+            gamesListView.ItemsSource = GamesRepo.GetAll();
+            
             
         }
 
@@ -32,10 +36,6 @@ namespace ProjectGamesPocket.Pages
             NavigationService.Navigate(pgAddGame);
         }
 
-        private void gamesListView_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            
-        }
 
         private void SetData()
         {
@@ -53,7 +53,8 @@ namespace ProjectGamesPocket.Pages
             }
             if (User != null)
             {
-                kasa.Text = User.Money.ToString();
+                //age = User.Age;
+                txtMoney.Text = "Your money: "+ User.Money.ToString() +"zł";
 
 
                 Assets.Scripts.Login.CurrentUser = User;
@@ -65,6 +66,24 @@ namespace ProjectGamesPocket.Pages
             Connector connector = new Connector(Assets.Scripts.Login.UserLogin, int.Parse(index.Text));
             ConnectorRepo.Insert(connector);
             MessageBox.Show("Game was added to your account!");
+        }
+
+        private static int? GameID = null;
+
+        private void gamesListView_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                if ((sender as ListView).SelectedItem is DAL.Entities.Games selectedGame)
+                {
+                    GameID = Convert.ToInt32(selectedGame.Name);
+                    kasa.Text = GameID.ToString();
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }

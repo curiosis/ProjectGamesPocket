@@ -139,10 +139,10 @@ namespace ProjectGamesPocket.Pages
                 goto End;
             }
 
-            int metacritics;
+            uint metacritics;
             try
             {
-                metacritics = int.Parse(meta_textbox.Text);
+                metacritics = uint.Parse(meta_textbox.Text);
             }
             catch
             {
@@ -150,10 +150,10 @@ namespace ProjectGamesPocket.Pages
                 goto End;
             }
 
-            int pegi;
+            uint pegi;
             try
             {
-                pegi = int.Parse(pegi_combobox.Text);
+                pegi = uint.Parse(pegi_combobox.Text);
             }
             catch
             {

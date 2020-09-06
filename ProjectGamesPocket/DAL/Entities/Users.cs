@@ -12,11 +12,6 @@ namespace ProjectGamesPocket.DAL.Entities
             get;
             private set;
         }
-        public uint Age
-        {
-            get;
-            private set;
-        }
         public double Money
         {
             get;
@@ -31,7 +26,6 @@ namespace ProjectGamesPocket.DAL.Entities
         public Users(MySqlDataReader mySqlDataReader)
         {
             Login = mySqlDataReader["login"].ToString();
-            Age = uint.Parse(mySqlDataReader["age"].ToString());
             Money = double.Parse(mySqlDataReader["money"].ToString());
             Password = mySqlDataReader["password"].ToString();
         }
@@ -42,24 +36,22 @@ namespace ProjectGamesPocket.DAL.Entities
             Password = password;
         }
 
-        public Users(string login, uint age, double money)
+        public Users(string login, double money)
         {
             Login = login;
-            Age = age;
             Money = money;
         }
 
         public Users(Users user)
         {
             Login = user.Login;
-            Age = user.Age;
             Money = user.Money;
             Password = user.Password;
         }
 
         public override string ToString()
         {
-            return $"{Login},{Age},{Money},{Password}";
+            return $"{Login},{Money},{Password}";
         }
     }
 }

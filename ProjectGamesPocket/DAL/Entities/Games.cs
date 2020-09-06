@@ -43,7 +43,7 @@ namespace ProjectGamesPocket.DAL.Entities
             get;
             private set;
         }
-        public int Metacritics
+        public uint Metacritics
         {
             get;
             private set;
@@ -58,7 +58,7 @@ namespace ProjectGamesPocket.DAL.Entities
             get;
             private set;
         }
-        public int PEGI
+        public uint PEGI
         {
             get;
             private set;
@@ -71,10 +71,10 @@ namespace ProjectGamesPocket.DAL.Entities
             string type,
             double price,
             string release_date,
-            int metacritics,
+            uint metacritics,
             string exclusive,
             string isSeries,
-            int pegi)
+            uint pegi)
         {
             ID = null;
             Name = name.Trim();
@@ -113,10 +113,10 @@ namespace ProjectGamesPocket.DAL.Entities
             Type = mySqlDataReader["type"].ToString();
             Price = double.Parse(mySqlDataReader["price"].ToString());
             ReleaseDate = mySqlDataReader["release_date"].ToString();
-            Metacritics = int.Parse(mySqlDataReader["metacritics"].ToString());
+            Metacritics = uint.Parse(mySqlDataReader["metacritics"].ToString());
             Exclusive = mySqlDataReader["exclusive"].ToString();
             IsSeries = mySqlDataReader["IsSeries"].ToString();
-            PEGI = int.Parse(mySqlDataReader["pegi"].ToString());
+            PEGI = uint.Parse(mySqlDataReader["pegi"].ToString());
         }
 
         public string ToInsert()
