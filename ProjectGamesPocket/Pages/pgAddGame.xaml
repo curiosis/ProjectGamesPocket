@@ -10,7 +10,7 @@
       Title="pgAddGame"
       Background="#201f20">
     <Page.Resources>
-        
+
         <Style x:Key="txtStyle" TargetType="{x:Type TextBlock}">
             <Setter Property="FontSize" Value="28"/>
             <Setter Property="Foreground" Value="#ff0089"/>
@@ -68,7 +68,7 @@
                                Style="{StaticResource txtStyle}"/>
                     <TextBox   Grid.Column="1" Grid.Row="0"
                                x:Name="Name_textbox"
-                               Style="{StaticResource txtBoxStyle}"/>
+                               Style="{StaticResource txtBoxStyle}" Width="415"/>
 
                     <!-- Publisher -->
                     <TextBlock Grid.Column="0" Grid.Row="1"
@@ -77,7 +77,7 @@
 
                     <TextBox   Grid.Column="1" Grid.Row="1"
                                x:Name="publisher_textbox"
-                               Style="{StaticResource txtBoxStyle}"/>
+                               Style="{StaticResource txtBoxStyle}" Width="415"/>
 
                     <!-- Producent -->
                     <TextBlock Grid.Column="0" Grid.Row="2"
@@ -86,7 +86,7 @@
 
                     <TextBox   Grid.Column="1" Grid.Row="2"
                                x:Name="producent_textbox"
-                               Style="{StaticResource txtBoxStyle}"/>
+                               Style="{StaticResource txtBoxStyle}" Width="415"/>
 
                     <!-- Type -->
                     <TextBlock Grid.Column="0" Grid.Row="3"
@@ -107,8 +107,8 @@
                             Grid.Row="3" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20"/>
-                    
+                            FontWeight="Bold" FontSize="20" Click="btnInfoType_Click"/>
+
 
                     <!-- Price -->
                     <TextBlock Grid.Column="0" Grid.Row="4"
@@ -117,7 +117,7 @@
 
                     <TextBox   Grid.Column="1" Grid.Row="4"
                                x:Name="price_textbox"
-                               Style="{StaticResource txtBoxStyle}"/>
+                               Style="{StaticResource txtBoxStyle}" Width="415"/>
                     <Button x:Name="btnInfoPrice" 
                             Content="?" 
                             Grid.Column="2" 
@@ -125,7 +125,7 @@
                             Grid.Row="4" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20"/>
+                            FontWeight="Bold" FontSize="20" Click="btnInfoPrice_Click"/>
 
                     <!-- Release Date -->
                     <TextBlock Grid.Column="0" Grid.Row="5"
@@ -144,7 +144,7 @@
                             Grid.Row="5" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20"/>
+                            FontWeight="Bold" FontSize="20" Click="btnInfoDate_Click"/>
 
                     <!-- Metacritics -->
                     <TextBlock Grid.Column="0" Grid.Row="6"
@@ -153,7 +153,7 @@
 
                     <TextBox   Grid.Column="1" Grid.Row="6"
                                x:Name="meta_textbox"
-                               Style="{StaticResource txtBoxStyle}"/>
+                               Style="{StaticResource txtBoxStyle}" Width="415"/>
 
                     <Button x:Name="btnInfoMetacritics" 
                             Content="?" 
@@ -162,7 +162,7 @@
                             Grid.Row="6" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20"/>
+                            FontWeight="Bold" FontSize="20" Click="btnInfoMetacritics_Click"/>
 
                     <!-- Exclusive -->
                     <TextBlock Grid.Column="0" Grid.Row="7"
@@ -184,7 +184,7 @@
                             Grid.Row="7" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20"/>
+                            FontWeight="Bold" FontSize="20" Click="btnInfoExclusive_Click"/>
 
                     <!-- isSeries -->
                     <TextBlock Grid.Column="0" Grid.Row="8"
@@ -207,7 +207,7 @@
                             Grid.Row="8" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20"/>
+                            FontWeight="Bold" FontSize="20" Click="btnInfoIsSeries_Click"/>
 
                     <!-- PEGI -->
                     <TextBlock Grid.Column="0" Grid.Row="9"
@@ -229,12 +229,12 @@
                             Grid.Row="9" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20"/>
-                    
+                            FontWeight="Bold" FontSize="20" Click="btnInfoPEGI_Click"/>
+
                 </Grid>
 
             </StackPanel>
-            
+
 
         </StackPanel>
         <Button Content="Button" Height="20" Width="120" VerticalAlignment="Bottom" Click="Button_Click"/>

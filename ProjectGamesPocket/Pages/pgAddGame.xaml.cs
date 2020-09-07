@@ -186,5 +186,41 @@ namespace ProjectGamesPocket.Pages
             string s1 = dp1.SelectedDate.ToString();
             return (s1.Substring(6, 4)+"-"+ s1.Substring(3, 2)+"-"+s1.Substring(0, 2));
         }
+
+        private void btnInfoType_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(Properties.Resources.infoType, Properties.Resources.info);
+        }
+
+        private void btnInfoPrice_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(Properties.Resources.infoPrice, Properties.Resources.info);
+        }
+
+        private void btnInfoDate_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(Properties.Resources.infoDate, Properties.Resources.info);
+        }
+
+        private void btnInfoMetacritics_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Metacritic is a website that aggregates reviews of films, TV shows, music albums, video games and formerly, books. For each product, the scores from each review are averaged.\n\nScore index\n\n\nUniversal acclaim 90–100\nGenerally favorable reviews 75–89\nMixed or average reviews 50–74\nGenerally unfavorable reviews 20–49\nOverwhelming dislike 0-19", Properties.Resources.info);
+        }
+
+        private void btnInfoExclusive_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(Properties.Resources.infoExc, Properties.Resources.info);
+        }
+
+        private void btnInfoIsSeries_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(Properties.Resources.infoIsSeries, Properties.Resources.info);
+        }
+
+        private void btnInfoPEGI_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Pan European Game Information(PEGI) is a European video game content rating system established to help European consumers make informed decisions when buying video games or apps through the use of age recommendations and content descriptors.\n\n - 3 -\nThe content of games with a PEGI 3 rating is considered suitable for all age groups.The game should not contain any sounds or pictures that are likely to frighten young children.A very mild form of violence(in a comical context or a childlike setting) is acceptable.No bad language should be heard.\n\n - 7 -\nGame content with scenes or sounds that can possibly be frightening to younger children should fall in this category.Very mild forms of violence(implied, non - detailed, or non - realistic violence) are acceptable for a game with a PEGI 7 rating.\n\n - 12 -\nVideo games that show violence of a slightly more graphic nature towards fantasy characters or non - realistic violence towards human - like characters would fall in this age category.Sexual innuendo or sexual posturing can be present, while any bad language in this category must be mild. Gambling as it is normally carried out in real life in casinos or gambling halls can also be present(e.g.card games that in real life would be played for money).\n\n - 16 -\nThis rating is applied once the depiction of violence(or sexual activity) reaches a stage that looks the same as would be expected in real life. The use of bad language in games with a PEGI 16 rating can be more extreme, while games of chance, and the use of tobacco, alcohol, or illegal drugs can also be present.\n\n - 18 -\nThe adult classification is applied when the level of violence reaches a stage where it becomes a depiction of gross violence, apparently motiveless killing, or violence towards defenseless characters.The glamorization of the use of illegal drugs, and explicit sexual activity should also fall into this age category."
+, Properties.Resources.info);
+        }
     }
 }

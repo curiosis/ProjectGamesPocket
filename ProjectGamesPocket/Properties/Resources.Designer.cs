@@ -473,5 +473,77 @@ namespace ProjectGamesPocket.Properties {
                 return ResourceManager.GetString("gameType9", resourceCulture);
             }
         }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Information.
+        /// </summary>
+        public static string info {
+            get {
+                return ResourceManager.GetString("info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu If the game has been released on several platforms, please provide the earliest release date..
+        /// </summary>
+        public static string infoDate {
+            get {
+                return ResourceManager.GetString("infoDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu If the game has been released on one platform, select it. If, however, the game has been released on more than one platform, select &quot;No&quot;..
+        /// </summary>
+        public static string infoExc {
+            get {
+                return ResourceManager.GetString("infoExc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu If the game is part of a series or universe, select &quot;Yes&quot;, otherwise select &quot;no&quot;..
+        /// </summary>
+        public static string infoIsSeries {
+            get {
+                return ResourceManager.GetString("infoIsSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Metacritic is a website that aggregates reviews of films, TV shows, music albums, video games and formerly, books. For each product, the scores from each review are averaged.\n\nScore index\nUniversal acclaim 90–100\nGenerally favorable reviews 75–89\nMixed or average reviews 50–74\nGenerally unfavorable reviews 20–49\nOverwhelming dislike 0-19.
+        /// </summary>
+        public static string infoMeta {
+            get {
+                return ResourceManager.GetString("infoMeta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Pan European Game Information (PEGI) is a European video game content rating system established to help European consumers make informed decisions when buying video games or apps through the use of age recommendations and content descriptors.\n\n-3-\nThe content of games with a PEGI 3 rating is considered suitable for all age groups. The game should not contain any sounds or pictures that are likely to frighten young children. A very mild form of violence (in a comical context or a childlike setting) is acc [obcięto pozostałą część ciągu]&quot;;.
+        /// </summary>
+        public static string infoPEGI {
+            get {
+                return ResourceManager.GetString("infoPEGI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu The price of the game should be given in zlotys (PLN)..
+        /// </summary>
+        public static string infoPrice {
+            get {
+                return ResourceManager.GetString("infoPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu If the game has several types or sub-types, the main type should be given..
+        /// </summary>
+        public static string infoType {
+            get {
+                return ResourceManager.GetString("infoType", resourceCulture);
+            }
+        }
     }
 }

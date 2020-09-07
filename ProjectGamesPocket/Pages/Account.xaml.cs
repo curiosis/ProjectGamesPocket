@@ -3,6 +3,8 @@ using ProjectGamesPocket.DAL.Entities;
 using ProjectGamesPocket.DAL.Repositories;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,13 +18,12 @@ using System.Windows.Shapes;
 
 namespace ProjectGamesPocket.Pages
 {
-    /// <summary>
-    /// Logika interakcji dla klasy Account.xaml
-    /// </summary>
+
     public partial class Account : Page
     {
         Users User = null;
         string moneyValue;
+
         public Account()
         {
             InitializeComponent();
@@ -36,9 +37,11 @@ namespace ProjectGamesPocket.Pages
             {
                 Users user = new Users(Assets.Scripts.Login.UserLogin, User.Money);
                 UsersRepo.Update(user,100);
+                check.Text = "";
                 SetData();
             }
         }
+
 
         private void gamesUserListView_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -61,6 +64,7 @@ namespace ProjectGamesPocket.Pages
             }
             if (User != null)
             {
+                userName.Content = "Hello "+User.Login+"!";
                 moneyValue = User.Money.ToString();
                 actualna.Text = (Math.Round(Convert.ToDouble(moneyValue), 2)).ToString();
 
