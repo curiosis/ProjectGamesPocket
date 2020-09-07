@@ -11,14 +11,14 @@
       Background="#201f20">
 
     <Grid>
-        <StackPanel VerticalAlignment="Top" Height="300">
+        <StackPanel VerticalAlignment="Top" Height="284">
             <Grid Height="60">
                 <Label x:Name="userName" Content="" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="#ff0069" FontWeight="Bold" FontSize="35"/>
 
 
 
             </Grid>
-            <Grid Height="188" Margin="0,50,10,0" HorizontalAlignment="Center" Width="750">
+            <Grid Height="179" Margin="0,50,10,0" HorizontalAlignment="Center" Width="750">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="2*"/>
@@ -36,7 +36,7 @@
             </Grid>
 
         </StackPanel>
-        <StackPanel VerticalAlignment="Bottom" Height="450" Margin="10,0,10,0">
+        <StackPanel VerticalAlignment="Top" Height="504" Margin="10,296,10,0">
             <TextBlock HorizontalAlignment="Center" Text="Your Games:" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" FontSize="35" Foreground="#767576"/>
             <ListView x:Name="gamesUserListView" Margin="10"
                           ScrollViewer.VerticalScrollBarVisibility="Visible"

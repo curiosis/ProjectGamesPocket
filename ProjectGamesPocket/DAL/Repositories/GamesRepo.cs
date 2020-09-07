@@ -51,6 +51,39 @@ namespace ProjectGamesPocket.DAL.Repositories
             return games;
         }
 
+        public static List<Entities.Games> Getby(string name, string publisher, string producer, string type, string exc, string pegi)
+        {
+            List<Entities.Games> games = new List<Entities.Games>();
+
+            using (var connection = DBConnection.Instance.Connection)
+            {
+
+                string commandSearch = $"SELECT* FROM games WHERE(namegame LIKE '%{name}%' OR namegame LIKE '%{name}' OR namegame LIKE '{name}%') AND" +
+                    $"(Publisher LIKE '%{publisher}%' OR Publisher LIKE '%{publisher}' OR Publisher LIKE '{publisher}%') AND" +
+                    $"(Producer LIKE '%{producer}%' OR Producer LIKE '%{producer}' OR Producer LIKE '{producer}%')";
+
+                if (type != "")
+                    commandSearch += $"AND (Type LIKE '{type}')";
+
+                if (exc != "")
+                    commandSearch += $"AND (Exclusive LIKE '{exc}')";
+
+                if (pegi != "")
+                    commandSearch += $"AND (PEGI LIKE '{pegi}')";
+
+
+                MySqlCommand mySqlCommand = new MySqlCommand($"{commandSearch}", connection);
+                connection.Open();
+                var reader = mySqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    games.Add(new Entities.Games(reader));
+                }
+                connection.Close();
+            }
+            return games;
+        }
+
         public static bool Insert(Games games)
         {
             bool condition = false;

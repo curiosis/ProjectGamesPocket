@@ -24,9 +24,11 @@ namespace ProjectGamesPocket.Pages
         public pgGames()
         {
             InitializeComponent();
+            type_combobox.ItemsSource = ListType();
+            pegi_combobox.ItemsSource = ListPEGI();
+            exclusive_combobox.ItemsSource = ListExclusive();
             SetData();
             gamesListView.ItemsSource = GamesRepo.GetAll();
-            
             
         }
 
@@ -40,8 +42,6 @@ namespace ProjectGamesPocket.Pages
         private void SetData()
         {
             var UserList = UsersRepo.GetAll();
-
-            
 
             foreach (var user in UserList)
             {
@@ -59,6 +59,8 @@ namespace ProjectGamesPocket.Pages
 
                 Assets.Scripts.Login.CurrentUser = User;
             }
+
+
         }
 
             private void Button_Click(object sender, RoutedEventArgs e)
@@ -99,6 +101,85 @@ namespace ProjectGamesPocket.Pages
             {
 
             }
+        }
+
+        private static List<string> ListType()
+        {
+            List<string> listType = new List<string>
+            {
+                "",
+                Properties.Resources.gameType1,
+                Properties.Resources.gameType2,
+                Properties.Resources.gameType3,
+                Properties.Resources.gameType4,
+                Properties.Resources.gameType5,
+                Properties.Resources.gameType6,
+                Properties.Resources.gameType7,
+                Properties.Resources.gameType8,
+                Properties.Resources.gameType9,
+                Properties.Resources.gameType10,
+                Properties.Resources.gameType11
+                
+            };
+
+            return listType;
+        }
+
+        private static List<string> ListExclusive()
+        {
+            List<string> listExclusive = new List<string>
+            {
+                "",
+                Properties.Resources.gameEx1,
+                Properties.Resources.gameEx2,
+                Properties.Resources.gameEx3,
+                Properties.Resources.gameEx4,
+                Properties.Resources.gameEx5,
+                Properties.Resources.gameEx6,
+                Properties.Resources.gameEx7,
+                Properties.Resources.gameEx8,
+                Properties.Resources.gameEx9,
+                Properties.Resources.gameEx10,
+                Properties.Resources.gameEx11,
+                Properties.Resources.gameEx12,
+                Properties.Resources.gameEx13,
+                Properties.Resources.gameEx14,
+                Properties.Resources.gameEx15,
+                Properties.Resources.gameEx16,
+                Properties.Resources.gameEx17,
+                Properties.Resources.gameEx18
+                
+            };
+
+            return listExclusive;
+        }
+
+        private static List<string> ListPEGI()
+        {
+            List<string> listpegi = new List<string>
+            {
+                "",
+                Properties.Resources.gamePEGI1,
+                Properties.Resources.gamePEGI2,
+                Properties.Resources.gamePEGI3,
+                Properties.Resources.gamePEGI4,
+                Properties.Resources.gamePEGI5
+            };
+
+
+            return listpegi;
+        }
+
+        private void btnSearchGame_Click(object sender, RoutedEventArgs e)
+        {
+            string name = nameSearch.Text;
+            string publisher = publisherSearch.Text;
+            string producer = producerSearch.Text;
+            string type = type_combobox.Text;
+            string exc = exclusive_combobox.Text;
+            string pegi = pegi_combobox.Text;
+
+            gamesListView.ItemsSource = GamesRepo.Getby(name, publisher, producer, type, exc, pegi);
         }
     }
 }
