@@ -16,9 +16,9 @@ namespace ProjectGamesPocket.Pages
     /// <summary>
     /// Logika interakcji dla klasy pgInfo.xaml
     /// </summary>
-    public partial class pgInfo : Page
+    public partial class PgInfo : Page
     {
-        public pgInfo()
+        public PgInfo()
         {
             InitializeComponent();
         }

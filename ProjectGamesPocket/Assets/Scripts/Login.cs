@@ -18,18 +18,7 @@ namespace ProjectGamesPocket.Assets.Scripts
         public static bool loginStatus = false;
         public static Users CurrentUser;
 
-        private static string login = "";
-        public static string UserLogin
-        {
-            get
-            {
-                return login;
-            }
-            set
-            {
-                login = value;
-            }
-        }
+        public static string UserLogin { get; set; } = "";
 
         public static bool CheckPasswords(string s1, string s2)
         {
@@ -99,10 +88,8 @@ namespace ProjectGamesPocket.Assets.Scripts
         public static string HashPassword(string password)
         {
 
-            using (var sha256 = new SHA256Managed())
-            {
-                return BitConverter.ToString(sha256.ComputeHash(Encoding.UTF8.GetBytes(password))).Replace("-", "");
-            }
+            using var sha256 = new SHA256Managed();
+            return BitConverter.ToString(sha256.ComputeHash(Encoding.UTF8.GetBytes(password))).Replace("-", "");
         }
 
         public static string GetPassword(string login)

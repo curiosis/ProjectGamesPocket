@@ -4,7 +4,7 @@ namespace ProjectGamesPocket.DAL
 {
     class DBConnection
     {
-        private MySqlConnectionStringBuilder stringBuilder = new MySqlConnectionStringBuilder();
+        private readonly MySqlConnectionStringBuilder stringBuilder = new MySqlConnectionStringBuilder();
 
         private static DBConnection instance = null;
         public static DBConnection Instance

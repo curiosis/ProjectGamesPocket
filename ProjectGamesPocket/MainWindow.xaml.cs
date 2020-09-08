@@ -14,7 +14,7 @@ namespace ProjectGamesPocket
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string url = $"https://github.com/curiosis/ProjectGamesPocket";
+        private readonly string url = $"https://github.com/curiosis/ProjectGamesPocket";
 
         public MainWindow()
         {
@@ -24,39 +24,39 @@ namespace ProjectGamesPocket
             Main.Content = new pgHome();
         }
 
-        private List<Object> PageList = new List<Object>();
+        private readonly List<Object> PageList = new List<Object>();
 
-        private void btn_login_Click(object sender, RoutedEventArgs e)
+        private void Btn_login_Click(object sender, RoutedEventArgs e)
         {
             NewPage(new pgLogin());
         }
 
-        private void btn_home_Click(object sender, RoutedEventArgs e)
+        private void Btn_home_Click(object sender, RoutedEventArgs e)
         {
             NewPage(new pgHome());
         }
 
-        private void btn_account_Click(object sender, RoutedEventArgs e)
+        private void Btn_account_Click(object sender, RoutedEventArgs e)
         {
             NewPage(new Account());
         }
 
-        private void btn_games_Click(object sender, RoutedEventArgs e)
+        private void Btn_games_Click(object sender, RoutedEventArgs e)
         {
             NewPage(new pgGames());
         }
 
-        private void btn_producer_Click(object sender, RoutedEventArgs e)
+        private void Btn_producer_Click(object sender, RoutedEventArgs e)
         {
-            NewPage(new pgProducers());
+            NewPage(new PgProducers());
         }
 
-        private void btn_info_Click(object sender, RoutedEventArgs e)
+        private void Btn_info_Click(object sender, RoutedEventArgs e)
         {
-            NewPage(new pgInfo());
+            NewPage(new PgInfo());
         }
 
-        private void btn_github_Click(object sender, RoutedEventArgs e)
+        private void Btn_github_Click(object sender, RoutedEventArgs e)
         {
             Process.Start(new ProcessStartInfo { FileName = url, UseShellExecute = true });
         }

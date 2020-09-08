@@ -7,16 +7,16 @@ using System.Windows.Controls;
 
 namespace ProjectGamesPocket.Pages
 {
-    public partial class pgProducers : Page
+    public partial class PgProducers : Page
     {
 
-        public pgProducers()
+        public PgProducers()
         {
             InitializeComponent();
             producersListView.ItemsSource = ProducersRepo.GetAll();
         }
 
-        private void buttonSearch_Click(object sender, RoutedEventArgs e)
+        private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
             string name = name_search.Text;
             string country = country_search.Text;
@@ -24,16 +24,15 @@ namespace ProjectGamesPocket.Pages
 
             producersListView.ItemsSource = ProducersRepo.Getby(name,country,yoe);
         }
-        private void buttonInsert_Click(object sender, RoutedEventArgs e)
+        private void ButtonInsert_Click(object sender, RoutedEventArgs e)
         {
-            string name="", country="", website="";
-            int yoe=0;
+            string name ="", website="";
             try
             {
                name = name_insert.Text;
-                country = country_insert.Text;
+                string country = country_insert.Text;
                 website = website_insert.Text;
-                yoe = Convert.ToInt32(yoe_insert.Text);
+                int yoe = Convert.ToInt32(yoe_insert.Text);
                 var newProducer = new Producers(name, yoe, country, website);
 
                 ProducersRepo.Insert(newProducer);

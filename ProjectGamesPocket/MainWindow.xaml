@@ -51,7 +51,7 @@
                         BorderBrush="Transparent"
                         Background="Transparent"
                         Margin="16,20,16,0"
-                        Click="btn_login_Click"
+                        Click="Btn_login_Click"
                         Style="{StaticResource btnStyle}">
                     <StackPanel>
                         <Image Source="Assets/Icons/GP_loginIcon.png"
@@ -70,7 +70,7 @@
                         BorderBrush="Transparent"
                         Background="Transparent"
                         Margin="16,10"
-                        Click="btn_home_Click"
+                        Click="Btn_home_Click"
                         Style="{StaticResource btnStyle}">
                     <StackPanel>
                         <Image Source="Assets/Icons/GP_House.png"
@@ -88,7 +88,7 @@
                         BorderBrush="Transparent"
                         Background="Transparent"
                         Margin="16,10"
-                        Click="btn_account_Click"
+                        Click="Btn_account_Click"
                         Visibility="Hidden"
                         Style="{StaticResource btnStyle}">
                     <StackPanel>
@@ -107,7 +107,7 @@
                         BorderBrush="Transparent"
                         Background="Transparent"
                         Margin="16,10"
-                        Click="btn_games_Click"
+                        Click="Btn_games_Click"
                         Visibility="Hidden"
                         Style="{StaticResource btnStyle}">
                     <StackPanel>
@@ -126,7 +126,7 @@
                         BorderBrush="Transparent"
                         Background="Transparent"
                         Margin="16,10"
-                        Click="btn_producer_Click"
+                        Click="Btn_producer_Click"
                         Visibility="Hidden"
                         Style="{StaticResource btnStyle}">
                     <StackPanel>
@@ -147,7 +147,7 @@
                         BorderBrush="Transparent"
                         Background="Transparent"
                         Margin="16,10"
-                        Click="btn_info_Click"
+                        Click="Btn_info_Click"
                         Visibility="Visible"
                         Style="{StaticResource btnStyle}">
                     <StackPanel>
@@ -166,7 +166,7 @@
                         BorderBrush="Transparent"
                         Background="Transparent"
                         Margin="16,180,16,16"
-                        Click="btn_github_Click"
+                        Click="Btn_github_Click"
                         Visibility="Visible"
                         Style="{StaticResource btnStyle}">
                     <StackPanel>
