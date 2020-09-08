@@ -170,8 +170,7 @@
                         Visibility="Visible"
                         Style="{StaticResource btnStyle}">
                     <StackPanel>
-                        <Image Source="Assets/Icons/GP_logout.png"
-                               Stretch="None"/>
+                        
                         <TextBlock x:Name="txtb_github"
                                    Text="GITHUB"
                                    HorizontalAlignment="Center"

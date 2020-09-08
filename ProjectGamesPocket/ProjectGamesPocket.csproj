@@ -11,6 +11,7 @@
     <None Remove="Assets\Icons\GP_Account.png" />
     <None Remove="Assets\Icons\GP_CloseWindow.png" />
     <None Remove="Assets\Icons\GP_Games.png" />
+    <None Remove="Assets\Icons\GP_git.png" />
     <None Remove="Assets\Icons\GP_House.png" />
     <None Remove="Assets\Icons\GP_Information.png" />
     <None Remove="Assets\Icons\GP_locklogin.png" />
@@ -42,6 +43,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Icons\GP_Games.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\GP_git.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Icons\GP_House.png">
