@@ -5,13 +5,9 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
 
 namespace ProjectGamesPocket
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private readonly string url = $"https://github.com/curiosis/ProjectGamesPocket";
@@ -28,7 +24,7 @@ namespace ProjectGamesPocket
 
         private void Btn_login_Click(object sender, RoutedEventArgs e)
         {
-            NewPage(new pgLogin());
+            NewPage(new PgLogin());
         }
 
         private void Btn_home_Click(object sender, RoutedEventArgs e)
@@ -43,7 +39,7 @@ namespace ProjectGamesPocket
 
         private void Btn_games_Click(object sender, RoutedEventArgs e)
         {
-            NewPage(new pgGames());
+            NewPage(new PgGames());
         }
 
         private void Btn_producer_Click(object sender, RoutedEventArgs e)

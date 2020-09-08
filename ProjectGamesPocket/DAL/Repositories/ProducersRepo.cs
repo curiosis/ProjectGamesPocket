@@ -1,14 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjectGamesPocket.DAL.Entities;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ProjectGamesPocket.DAL.Repositories
 {
     class ProducersRepo
     {
-        public static string ADD_OPT = "SORT BY 'Country'";
         private const string GET_ALL = "SELECT * FROM producers";
         private const string INSERT = "INSERT INTO Producers(NameProducer, YoE, Country, Website) VALUES";
 

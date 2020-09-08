@@ -1,27 +1,19 @@
-﻿using ProjectGamesPocket.Assets.Scripts;
-using ProjectGamesPocket.DAL.Entities;
+﻿using ProjectGamesPocket.DAL.Entities;
 using ProjectGamesPocket.DAL.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ProjectGamesPocket.Pages
 {
-    public partial class pgGames : Page
+    public partial class PgGames : Page
     {
         string moneyValue;
         Users User = null;
-        public pgGames()
+        public PgGames()
         {
             InitializeComponent();
             type_combobox.ItemsSource = ListType();
@@ -32,7 +24,7 @@ namespace ProjectGamesPocket.Pages
             
         }
 
-        private void btnAddGame_Click(object sender, RoutedEventArgs e)
+        private void BtnAddGame_Click(object sender, RoutedEventArgs e)
         {
             PgAddGame pgAddGame = new PgAddGame();
             NavigationService.Navigate(pgAddGame);
@@ -87,7 +79,7 @@ namespace ProjectGamesPocket.Pages
         private static int? GameID = null;
         private static double? GamePrice = null;
 
-        private void gamesListView_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void GamesListView_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             try
             {
@@ -170,7 +162,7 @@ namespace ProjectGamesPocket.Pages
             return listpegi;
         }
 
-        private void btnSearchGame_Click(object sender, RoutedEventArgs e)
+        private void BtnSearchGame_Click(object sender, RoutedEventArgs e)
         {
             string name = nameSearch.Text;
             string publisher = publisherSearch.Text;

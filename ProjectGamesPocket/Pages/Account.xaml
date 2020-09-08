@@ -29,7 +29,7 @@
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
                 <TextBox Grid.Row="1" Grid.Column="0" x:Name="check" HorizontalAlignment="Center"  Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="220" Height="30" FontSize="24"/>
-                <Button x:Name="button" Content="Check!" HorizontalAlignment="Center" VerticalAlignment="Top" Click="button_Click" Grid.Column="0" Grid.Row="2" Height="30" Width="70" FontWeight="Bold" FontSize="20"/>
+                <Button x:Name="button" Content="Check!" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click" Grid.Column="0" Grid.Row="2" Height="30" Width="70" FontWeight="Bold" FontSize="20"/>
                 <TextBlock Grid.Column="1"  HorizontalAlignment="Center" Text="Your money:" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" FontSize="25" Foreground="#767576"/>
                 <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="Enter your code" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" FontSize="25" Foreground="#767576"/>
                 <TextBlock Grid.Row="1" Grid.Column="1" x:Name="actualna" Text="" TextWrapping="Wrap" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#767576" FontWeight="Bold" FontSize="25" Height="30"/>
@@ -40,7 +40,7 @@
             <TextBlock HorizontalAlignment="Center" Text="Your Games:" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" FontSize="35" Foreground="#767576"/>
             <ListView x:Name="gamesUserListView" Margin="10"
                           ScrollViewer.VerticalScrollBarVisibility="Visible"
-                          ScrollViewer.CanContentScroll="False" PreviewMouseLeftButtonDown="gamesUserListView_PreviewMouseLeftButtonDown" Height="430">
+                          ScrollViewer.CanContentScroll="False" PreviewMouseLeftButtonDown="GamesUserListView_PreviewMouseLeftButtonDown" Height="430">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="{x:Type ListViewItem}">
                         <Setter Property="BorderBrush" Value="LightGray" />

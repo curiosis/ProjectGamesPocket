@@ -107,7 +107,7 @@
                             Grid.Row="3" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20" Click="btnInfoType_Click"/>
+                            FontWeight="Bold" FontSize="20" Click="BtnInfoType_Click"/>
 
 
                     <!-- Price -->
@@ -125,7 +125,7 @@
                             Grid.Row="4" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20" Click="btnInfoPrice_Click"/>
+                            FontWeight="Bold" FontSize="20" Click="BtnInfoPrice_Click"/>
 
                     <!-- Release Date -->
                     <TextBlock Grid.Column="0" Grid.Row="5"
@@ -144,7 +144,7 @@
                             Grid.Row="5" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20" Click="btnInfoDate_Click"/>
+                            FontWeight="Bold" FontSize="20" Click="BtnInfoDate_Click"/>
 
                     <!-- Metacritics -->
                     <TextBlock Grid.Column="0" Grid.Row="6"
@@ -162,7 +162,7 @@
                             Grid.Row="6" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20" Click="btnInfoMetacritics_Click"/>
+                            FontWeight="Bold" FontSize="20" Click="BtnInfoMetacritics_Click"/>
 
                     <!-- Exclusive -->
                     <TextBlock Grid.Column="0" Grid.Row="7"
@@ -184,7 +184,7 @@
                             Grid.Row="7" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20" Click="btnInfoExclusive_Click"/>
+                            FontWeight="Bold" FontSize="20" Click="BtnInfoExclusive_Click"/>
 
                     <!-- isSeries -->
                     <TextBlock Grid.Column="0" Grid.Row="8"
@@ -207,7 +207,7 @@
                             Grid.Row="8" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20" Click="btnInfoIsSeries_Click"/>
+                            FontWeight="Bold" FontSize="20" Click="BtnInfoIsSeries_Click"/>
 
                     <!-- PEGI -->
                     <TextBlock Grid.Column="0" Grid.Row="9"
@@ -229,7 +229,7 @@
                             Grid.Row="9" 
                             VerticalAlignment="Center"  
                             Height="30" Width="30" 
-                            FontWeight="Bold" FontSize="20" Click="btnInfoPEGI_Click"/>
+                            FontWeight="Bold" FontSize="20" Click="BtnInfoPEGI_Click"/>
 
                 </Grid>
 

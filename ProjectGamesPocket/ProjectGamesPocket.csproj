@@ -9,17 +9,13 @@
   <ItemGroup>
     <None Remove="Assets\Fonts\Blacklisted.ttf" />
     <None Remove="Assets\Icons\GP_Account.png" />
-    <None Remove="Assets\Icons\GP_accountlogin.png" />
-    <None Remove="Assets\Icons\GP_Background.png" />
     <None Remove="Assets\Icons\GP_CloseWindow.png" />
     <None Remove="Assets\Icons\GP_Games.png" />
     <None Remove="Assets\Icons\GP_House.png" />
     <None Remove="Assets\Icons\GP_Information.png" />
     <None Remove="Assets\Icons\GP_locklogin.png" />
     <None Remove="Assets\Icons\GP_loginIcon.png" />
-    <None Remove="Assets\Icons\GP_Logout.png" />
     <None Remove="Assets\Icons\GP_Menu.png" />
-    <None Remove="Assets\Icons\GP_New.png" />
     <None Remove="Assets\Icons\GP_Producer.png" />
     <None Remove="Assets\Icons\GP_Wallet.png" />
     <None Remove="Assets\Images\GP_backgroundInfo.png" />
@@ -42,12 +38,6 @@
     <Resource Include="Assets\Icons\GP_Account.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\Icons\GP_accountlogin.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Icons\GP_Background.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Assets\Icons\GP_CloseWindow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -66,13 +56,7 @@
     <Resource Include="Assets\Icons\GP_loginIcon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\Icons\GP_Logout.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Assets\Icons\GP_Menu.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Icons\GP_New.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Icons\GP_Producer.png">

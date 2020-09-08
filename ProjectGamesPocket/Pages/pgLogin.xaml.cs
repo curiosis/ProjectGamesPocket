@@ -1,40 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
-using ProjectGamesPocket.DAL;
-using ProjectGamesPocket.Pages;
 
 namespace ProjectGamesPocket.Pages
 {
-    /// <summary>
-    /// Logika interakcji dla klasy pgLogin.xaml
-    /// </summary>
-    public partial class pgLogin : Page
+    public partial class PgLogin : Page
     {
         private string login, password;
 
-        public pgLogin()
+        public PgLogin()
         {
             InitializeComponent();
-            //DBConnection.AdminLogin();
         }
 
-        private void btn_Register_Click(object sender, RoutedEventArgs e)
+        private void Btn_Register_Click(object sender, RoutedEventArgs e)
         {
-            pgRegister pgregister = new pgRegister();
+            PgRegister pgregister = new PgRegister();
             NavigationService.Navigate(pgregister);
         }
 
-        private void btn_Login_Click(object sender, RoutedEventArgs e)
+        private void Btn_Login_Click(object sender, RoutedEventArgs e)
         {
             login = Login_textbox.Text;
             password = Password_textbox.Password;

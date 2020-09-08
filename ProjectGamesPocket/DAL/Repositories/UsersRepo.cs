@@ -1,9 +1,6 @@
-﻿using Google.Protobuf;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Windows;
 
 namespace ProjectGamesPocket.DAL.Repositories
 {
@@ -32,14 +29,14 @@ namespace ProjectGamesPocket.DAL.Repositories
             using (var connection = DBConnection.Instance.Connection)
             {
                 var command_CreateUser = new MySqlCommand($"CREATE USER '{Login}'@'localhost' IDENTIFIED BY '{Password}'", connection);
-                //var command_GrantContains = new MySqlCommand($"GRANT SELECT ON CONTAINS TO '{Login}'", connection);
+                var command_GrantContains = new MySqlCommand($"GRANT SELECT ON CONNECTOR TO '{Login}'", connection);
                 var command_GrantGames = new MySqlCommand($"GRANT SELECT ON games TO '{Login}'", connection);
                 var command_GrantProducers = new MySqlCommand($"GRANT SELECT ON producers TO '{Login}'", connection);
                 var command_AddUser = new MySqlCommand($"INSERT INTO USERS (LOGIN, PASSWORD, MONEY) VALUES ('{Login}', '{Password}',0)", connection);
 
                 connection.Open();
                 command_CreateUser.ExecuteNonQuery();
-                //command_GrantContains.ExecuteNonQuery();
+                command_GrantContains.ExecuteNonQuery();
                 command_GrantGames.ExecuteNonQuery();
                 command_GrantProducers.ExecuteNonQuery();
                 command_AddUser.ExecuteNonQuery();

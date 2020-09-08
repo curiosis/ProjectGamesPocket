@@ -1,16 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjectGamesPocket.DAL.Entities;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 
 namespace ProjectGamesPocket.DAL.Repositories
 {
     class GamesRepo
     {
-
-        public static string ADD_OPT = "WHERE ID = ";
         private const string GET_ALL = "SELECT id_game, namegame, publisher, producer, type,price,release_date,metacritics,exclusive,isSeries,pegi FROM games";
         private const string INSERT = "INSERT INTO Games (namegame,publisher,producer,type,price,release_date,metacritics,exclusive,isSeries,pegi) VALUES";
 
