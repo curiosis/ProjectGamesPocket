@@ -17,7 +17,7 @@ namespace ProjectGamesPocket
             InitializeComponent();
             MouseDown += Window_MouseDown;
 
-            Main.Content = new pgHome();
+            Main.Content = new PgHome();
         }
 
         private readonly List<Object> PageList = new List<Object>();
@@ -29,7 +29,7 @@ namespace ProjectGamesPocket
 
         private void Btn_home_Click(object sender, RoutedEventArgs e)
         {
-            NewPage(new pgHome());
+            NewPage(new PgHome());
         }
 
         private void Btn_account_Click(object sender, RoutedEventArgs e)

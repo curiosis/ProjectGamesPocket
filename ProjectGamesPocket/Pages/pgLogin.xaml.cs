@@ -37,7 +37,7 @@ namespace ProjectGamesPocket.Pages
                         (window as MainWindow).SetVisibilityAfterLogin();
                 }
 
-                pgHome newPage = new pgHome();
+                PgHome newPage = new PgHome();
                 NavigationService.Navigate(newPage);
             }
         }

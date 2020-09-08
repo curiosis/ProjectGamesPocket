@@ -2,9 +2,9 @@
 
 namespace ProjectGamesPocket.Pages
 {
-    public partial class pgHome : Page
+    public partial class PgHome : Page
     {
-        public pgHome()
+        public PgHome()
         {
             InitializeComponent();
         }
