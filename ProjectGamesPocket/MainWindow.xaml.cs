@@ -51,14 +51,9 @@ namespace ProjectGamesPocket
             NewPage(new pgProducers());
         }
 
-        private void btn_new_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        //xd//
         private void btn_info_Click(object sender, RoutedEventArgs e)
         {
-
+            NewPage(new pgInfo());
         }
 
         private void btn_github_Click(object sender, RoutedEventArgs e)

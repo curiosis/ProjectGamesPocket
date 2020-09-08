@@ -140,24 +140,7 @@
                     </StackPanel>
                 </Button>
 
-                <!-- NEW BUTTON -->
-                <Button x:Name="btn_new"
-                        BorderBrush="Transparent"
-                        Background="Transparent"
-                        Margin="16,10"
-                        Click="btn_new_Click"
-                        Visibility="Visible"
-                        Style="{StaticResource btnStyle}">
-                    <StackPanel>
-                        <Image Source="Assets/Icons/GP_New.png"
-                               Stretch="None"/>
-                        <TextBlock x:Name="txtb_new"
-                                   Text="NEW"
-                                   HorizontalAlignment="Center"
-                                   FontSize="20"
-                                   FontWeight="Bold"/>
-                    </StackPanel>
-                </Button>
+                
 
                 <!-- INFO BUTTON -->
                 <Button x:Name="btn_info"
@@ -182,7 +165,7 @@
                 <Button x:Name="btn_github"
                         BorderBrush="Transparent"
                         Background="Transparent"
-                        Margin="16,85,16,16"
+                        Margin="16,180,16,16"
                         Click="btn_github_Click"
                         Visibility="Visible"
                         Style="{StaticResource btnStyle}">
