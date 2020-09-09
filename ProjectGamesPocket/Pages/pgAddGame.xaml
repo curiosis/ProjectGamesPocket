@@ -10,8 +10,31 @@
       Title="pgAddGame"
       Background="#201f20">
     <Page.Resources>
-
-        <Style x:Key="txtStyle" TargetType="{x:Type TextBlock}">
+        <Style x:Key="txtBlockStyle" TargetType="{x:Type TextBlock}">
+                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="#767576"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style>
+            <Style x:Key="btnStyle" TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="LightBlue" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#ff0069" TargetName="Border" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="txtStyle" TargetType="{x:Type TextBlock}">
             <Setter Property="FontSize" Value="28"/>
             <Setter Property="Foreground" Value="#ff0089"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -237,6 +260,6 @@
 
 
         </StackPanel>
-        <Button Content="Button" Height="20" Width="120" VerticalAlignment="Bottom" Click="Button_Click"/>
+        <Button Style="{StaticResource btnStyle}" Content="ADD GAME" Height="40" Width="220" VerticalAlignment="Bottom" Click="Button_Click" FontWeight="Bold"/>
     </Grid>
 </Page>

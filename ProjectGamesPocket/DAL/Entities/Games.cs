@@ -119,7 +119,6 @@ namespace ProjectGamesPocket.DAL.Entities
         public string ToInsert()
         {
             var price = Price.ToString().Replace(',', '.');
-            MessageBox.Show(price.ToString(),"xd");
             return $"('{Name}','{Publisher}','{Producer_id}','{Type}','{price}','{ReleaseDate}','{Metacritics}'," +
                 $"'{Exclusive}','{IsSeries}','{PEGI}')";
         }

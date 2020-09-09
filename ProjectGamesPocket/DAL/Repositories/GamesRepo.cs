@@ -86,7 +86,6 @@ namespace ProjectGamesPocket.DAL.Repositories
             using (var connection = DBConnection.Instance.Connection)
             {
                 MySqlCommand mySqlCommand = new MySqlCommand($"{INSERT} {games.ToInsert()}", connection);
-                MessageBox.Show(INSERT, games.ToInsert());
                 connection.Open();
                 var id = mySqlCommand.ExecuteNonQuery();
                 condition = true;
